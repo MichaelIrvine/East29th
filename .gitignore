@@ -1,0 +1,5 @@
+# Shopify Config Files to Ignore#
+config.yml
+
+# Config Prepros Files to Ignore#
+prepros.cfg

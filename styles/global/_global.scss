@@ -1,0 +1,11 @@
+@import 'reset';
+@import 'typography';
+@import 'icons';
+
+body {
+  overflow-x: hidden;
+}
+
+.grecaptcha-badge {
+  display: none;
+}

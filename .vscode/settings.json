@@ -1,0 +1,9 @@
+{
+  "editor.fontLigatures": null,
+  "emmet.includeLanguages": {
+    "liquid": "html"
+  },
+  "emmet.excludeLanguages": [
+    "markdown"
+  ]
+}

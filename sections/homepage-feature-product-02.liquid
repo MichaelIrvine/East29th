@@ -1,0 +1,32 @@
+<div class="homepage-feature-product-02">
+  <div class="homepage-feature-product-02__col-01">
+    <div class="feature-product-02__col-02--inner-wrapper">
+      <h2>{{section.settings.homepage-feature-product-02-title}}</h2>
+      <a href="/collections/all" class="button-main no-border">Shop Now</a>
+    </div>
+  </div>
+  <div class="homepage-feature-product-02__col-02">
+    <img src="{{section.settings.homepage-feature-product-02-image | img_url: 'master'}}" alt=""/>
+    <div class="background-fill"></div>
+  </div>
+</div>
+
+
+
+{% schema %} 
+  {
+    "name": "Feature Product 2",
+    "settings": [
+      {
+        "id": "homepage-feature-product-02-image",
+        "type": "image_picker",
+        "label": "Feature Product Image"
+      },
+      {
+        "id": "homepage-feature-product-02-title",
+        "type": "textarea",
+        "label": "Feature Product Title"
+      }
+    ]
+  }
+{% endschema %}

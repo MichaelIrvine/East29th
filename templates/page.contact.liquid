@@ -1,0 +1,29 @@
+
+<div class="contact-page--wrapper">
+  <div class="contact-page-info--wrapper">
+    <div class="contact-page-info__col-01">
+      <h1>Get In Touch!</h1>
+    </div>
+    <div class="contact-page-info__col-02">
+      <h3>Do you have any questions or comments?
+          Please feel free to send a message, we’ll get back to you as we can.
+      </h3>
+    </div>
+  </div>
+
+  <div class="contact-form--wrapper">
+    {% form 'contact' %}
+      {% if form.posted_successfully? %} Thank you for your contact {% endif %}
+      {{ form.errors | default_errors }}
+      <label for="ContactFormName">name</label>
+      <input type="text" id="ContactFormName" name="contact[name]" placeholder="Name" required>
+      <label for="ContactFormEmail">email</label>
+      <input type="email" id="ContactFormEmail" name="contact[email]" placeholder="Email" required>
+      <label for="ContactFormPhone">phone</label>
+      <input type="tel" id="ContactFormPhone" name="contact[phone]" placeholder="Phone">
+      <label for="ContactFormMessage">message</label>
+      <textarea rows="10" id="ContactFormMessage" name="contact[body]" placeholder="Message" style="resize: none;" required></textarea>
+      <input type="submit" value="send" class="button-main no-border">
+    {% endform %}
+  </div>
+</div>

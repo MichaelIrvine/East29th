@@ -1,0 +1,33 @@
+// Links
+a.button-main {
+  background-color: $e29green;
+  font-family: $font__main--med;
+  color: $e29yellow;
+  text-transform: uppercase;
+  border: 1px solid $e29yellow;
+  font-size: 0.8rem;
+  padding: 0.75rem 2rem;
+  margin: 1rem 0;
+  letter-spacing: 0.5;
+
+  &.no-border {
+    border: 1px solid $e29green;
+  }
+}
+
+// Buttons
+.button-main {
+  background-color: $e29green;
+  font-family: $font__main--med;
+  color: $e29yellow;
+  text-transform: uppercase;
+  border: 1px solid $e29yellow;
+  font-size: 0.8rem;
+  padding: 0.75rem 2rem;
+  margin: 1rem 0;
+  letter-spacing: 0.5;
+
+  &.no-border {
+    border: 1px solid $e29green;
+  }
+}

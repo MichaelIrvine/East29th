@@ -1,0 +1,54 @@
+<div class="homepage-feature-product__row-01 featured-product-row">
+  <div class="homepage-feature-product__col-01">
+    <img src="{{section.settings.homepage-feature-product-first-row-image | img_url: '1920x'}}" alt="feature product image"/>
+  </div>
+  <div class="homepage-feature-product__col-02">
+  <div class="col_02__inner-wrapper">
+      <svg xmlns="http://www.w3.org/2000/svg" width="86.195" height="86.195">
+          <defs>
+            <clipPath id="a">
+              <path data-name="Clip 2" d="M0 0h86.2v86.2H0z" transform="translate(.001 .805)" fill="none"/>
+            </clipPath>
+          </defs>
+          <g data-name="Group 12">
+            <g data-name="Group 3">
+              <path data-name="Clip 2" d="M0 .001h86.2v86.2H0z" fill="none"/>
+              <g data-name="Group 3" clip-path="url(#a)" transform="translate(-.001 -.804)">
+                <path data-name="Fill 1" d="M43.101 87.005A43.109 43.109 0 0126.324 4.192a43.109 43.109 0 0133.551 79.422 42.826 42.826 0 01-16.774 3.391zm0-84.7a41.6 41.6 0 1041.6 41.6 41.645 41.645 0 00-41.6-41.6z" fill="#fcc10f"/>
+              </g>
+            </g>
+            <path data-name="Stroke 4" d="M43.098 70.295V32.789" fill="none" stroke="#fcc10f" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"/>
+            <path data-name="Stroke 6" d="M48.403 39.103l-5.304 5.4-5.31-5.4" fill="none" stroke="#fcc10f" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"/>
+            <path data-name="Stroke 8" d="M48.403 50.748l-5.304 5.4-5.31-5.4" fill="none" stroke="#fcc10f" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"/>
+            <path data-name="Stroke 10" d="M43.098 15.903c-33.894 30.648 0 54.39 0 54.39s33.894-23.742 0-54.39z" fill="none" stroke="#fcc10f" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"/>
+          </g>
+      </svg>
+      <h2>{{section.settings.homepage-feature-product-first-row-title}}</h2>
+      <p>{{section.settings.homepage-feature-product-first-row-text}}</p>
+    </div>
+  </div>
+</div>
+
+
+{% schema %} 
+  {
+    "name": "Featured Row 1",
+    "settings": [
+      {
+        "id": "homepage-feature-product-first-row-image",
+        "type": "image_picker",
+        "label": "Featured Product Image"
+      },
+      {
+        "id": "homepage-feature-product-first-row-title",
+        "type": "textarea",
+        "label": "Featured Product Title"
+      },
+      {
+        "id": "homepage-feature-product-first-row-text",
+        "type": "textarea",
+        "label": "Featured Product Text"
+      }
+    ]
+  }
+{% endschema %}

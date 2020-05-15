@@ -1,0 +1,33 @@
+<div id="hero-homepage" class="hero-homepage">
+  <div class="hero-homepage__col-01">
+    <img src="{{section.settings.hero-homepage-image | img_url: '1920x'}}" alt="East 29th vital serum"/>
+  <div class="arrow-down">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24.413" height="98.707">
+      <g data-name="ARROW DOWN" fill="none" stroke="#fff" stroke-linecap="square" stroke-miterlimit="10">
+        <path data-name="Line 7" d="M12.207 1.3v96.04"/>
+        <g data-name="Group 49">
+          <path data-name="Line 8" d="M12.207 98L.707 85.65"/>
+          <path data-name="Line 9" d="M12.207 98l11.5-12.35"/>
+        </g>
+      </g>
+    </svg>
+  </div>
+  </div>
+  <div class="hero-homepage__col-02">
+    <h1>Natural Confidence:<br/>Skincare Beyond Skin</h1>
+    <a href="/shop" class="button-main">Discover</a>
+  </div>
+</div>
+
+{% schema %} 
+  {
+    "name": "Homepage Hero",
+    "settings": [
+      {
+        "id": "hero-homepage-image",
+        "type": "image_picker",
+        "label": "Homepage Hero Image"
+      }
+    ]
+  }
+{% endschema %}

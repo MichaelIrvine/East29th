@@ -1,0 +1,36 @@
+<div class="homepage-about-us">
+  <div class="homepage-about-us__col-01">
+    <img src="{{section.settings.homepage-about-us-image | img_url: 'master'}}" alt="woman using East 29th vital serum"/>
+  </div>
+  <div class="homepage-about-us__col-02">
+    <div class="about-us__col-02--inner-wrapper">
+      <h2>{{section.settings.homepage-about-us-title}}</h2>
+      <p>{{section.settings.homepage-about-us-text}}</p>
+      <a href="/about" class="button-main">Learn More</a>
+    </div>
+  </div>
+</div>
+
+
+{% schema %} 
+  {
+    "name": "About Us",
+    "settings": [
+      {
+        "id": "homepage-about-us-image",
+        "type": "image_picker",
+        "label": "About Us Image"
+      },
+      {
+        "id": "homepage-about-us-title",
+        "type": "text",
+        "label": "About Us Title"
+      },
+      {
+        "id": "homepage-about-us-text",
+        "type": "textarea",
+        "label": "About Us Text"
+      }
+    ]
+  }
+{% endschema %}
