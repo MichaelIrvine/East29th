@@ -1,0 +1,84 @@
+<div class="product-page__key-ingredients--wrapper">
+  <div class="key-ingredients__col-01">
+    <div class="col-01--inner-wrapper">
+      <h2>{{section.settings.key-ingredients-title}}</h2>
+      <div class="key-ingredients-list--wrapper">
+        {% for block in section.blocks %}
+          
+            <button class="toggle-ingredients accordion__button">
+              <h3>{{block.settings.ingredient}}</h3>
+            </button>
+          
+          <div class="ingredient-desc accordion__content">
+            <p>{{block.settings.ingredient-desc}}</p>
+          </div>
+        {% endfor %}
+        <button class="expand-full-ingredients ingredients-toggle">
+          Full Ingredients List
+          <svg xmlns="http://www.w3.org/2000/svg" width="9.019" height="11.819">
+            <path data-name="expand-arrow" d="M.29.412l7.857 5.419L.29 11.412" fill="none" stroke="#1b443d" stroke-miterlimit="10"/>
+          </svg>  
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="key-ingredients__col-02">
+    <img src="{{section.settings.key-ingredients-image | img_url: 'master'}}" alt="{{section.settings.key-ingredients-image.alt | escape }}">
+  </div>
+  <div class="full-ingredients--wrapper ingredients-drawer">
+    <div class="full-ingredients--inner-wrapper">
+      <div class="full-ingredients-title--wrapper">
+          <h2>{{ product.title }}</h2>
+          <button class="close-ingredients-drawer">
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+        <h4 class="full-ingredients--sub-title">INGREDIENTS</h4>
+        <p>{{section.settings.full-ingredients}}</p>
+      </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Key Ingredients",
+    "settings": [
+      {
+        "id": "key-ingredients-title",
+        "type": "textarea",
+        "label": "Key Ingredients Title",
+        "default": "Key Ingredients"
+      },
+      {
+        "id": "key-ingredients-image",
+        "type": "image_picker",
+        "label": "Key Ingredients Image"
+      },
+      {
+        "id": "full-ingredients",
+        "type": "textarea",
+        "label": "Enter Full Ingredients List",
+        "info": "Seperate each ingredient with a coma"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "text",
+        "name": "Ingredients",
+        "settings": [
+          {
+            "id": "ingredient",
+            "type": "text",
+            "label": "Enter Ingredient"
+          },
+          {
+            "id": "ingredient-desc",
+            "type": "textarea",
+            "label": "Enter Ingredient Description"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

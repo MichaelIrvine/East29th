@@ -3,3 +3,7 @@ config.yml
 
 # Config Prepros Files to Ignore#
 prepros.cfg
+
+# Ignore vscode settings
+.vscode
+node_modules

@@ -1,0 +1,28 @@
+{
+  "name": "east-29th-theme",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "concurrently \"theme watch\" \"parcel watch scripts/scripts.js --out-dir assets --out-file scripts.js\"",
+    "build": "parcel build scripts/scripts.js --out-dir assets --out-file scripts.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MichaelIrvine/East29th.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MichaelIrvine/East29th/issues"
+  },
+  "homepage": "https://github.com/MichaelIrvine/East29th#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "concurrently": "^5.2.0"
+  },
+  "dependencies": {}
+}

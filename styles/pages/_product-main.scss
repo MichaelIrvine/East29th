@@ -1,0 +1,279 @@
+.product {
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  a {
+    color: $e29green;
+  }
+
+  .product-page__hero-wrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+
+    .hero-wrapper__col-01 {
+      width: 50%;
+      height: 100%;
+      overflow: hidden;
+
+      #ProductPhotoImg {
+        width: 100%;
+      }
+    }
+    .hero-wrapper__col-02 {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+
+      .col-02--inner-wrapper {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+
+        h1 {
+          margin-bottom: 0;
+        }
+
+        .vital-serum__product-size {
+          font-family: $font__main--med;
+          margin-top: 0;
+          margin-bottom: 2rem;
+        }
+
+        p {
+          margin-bottom: 2rem;
+        }
+      }
+
+      // Price and shipping
+      form {
+        display: flex;
+        flex-direction: column;
+
+        #productSelect {
+          // Switch this on if there are product variants
+          display: none;
+        }
+
+        .product-add-to-cart--wrapper {
+          .product-price {
+            p {
+              font-family: $font__main--med;
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .features-bar {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    background-color: $e29green;
+
+    ul {
+      width: 100%;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+
+      li {
+        font-family: $font__main--reg;
+        color: $white;
+        display: flex;
+        align-items: center;
+
+        &:not(:last-child):after {
+          content: '';
+          display: block;
+          width: 4px;
+          height: 4px;
+          border-radius: 50%;
+          background-color: $white;
+          margin: 0 0.75rem;
+        }
+      }
+    }
+  }
+
+  // Key Ingredients Section
+  .product-page__key-ingredients--wrapper {
+    display: flex;
+    position: relative;
+    height: 100%;
+    margin-top: 10rem;
+
+    .key-ingredients__col-01 {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 6.5rem 8rem;
+
+      .col-01--inner-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+
+        h2 {
+          margin-bottom: 3rem;
+        }
+
+        .key-ingredients-list--wrapper {
+          .accordion__button {
+            width: 100%;
+            padding-bottom: 0.25rem;
+            border-bottom: 1px solid $e29green;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            &:focus {
+              outline: none;
+            }
+
+            h3 {
+              width: 100%;
+              display: flex;
+              justify-content: space-between;
+            }
+          }
+          .accordion__content {
+            max-height: 0;
+            overflow: hidden;
+            margin-bottom: 3rem;
+            transition: max-height 450ms ease-in-out, margin 450ms ease-in-out;
+          }
+        }
+
+        .expand-full-ingredients {
+          svg {
+            margin-left: 0.5rem;
+          }
+        }
+      }
+    }
+
+    .key-ingredients__col-02 {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    // Full Ingredients List Modal
+    .ingredients-drawer {
+      width: 50%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate3d(-100%, 0, 0);
+      transition: transform 350ms ease-in-out;
+      background-color: $white;
+      display: flex;
+      padding: 6.5rem 8rem;
+
+      &.open {
+        transform: translate3d(0, 0, 0);
+      }
+
+      .full-ingredients--inner-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        // justify-content: center;
+
+        .full-ingredients-title--wrapper {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+          margin-bottom: 3rem;
+
+          h2 {
+            flex: 1;
+          }
+
+          .close-ingredients-drawer {
+            width: 16px;
+            height: 16px;
+            position: relative;
+            padding: 0;
+          }
+
+          .close-ingredients-drawer > span {
+            width: 16px;
+            height: 1px;
+            display: block;
+            background-color: $e29green;
+            position: absolute;
+            top: 8px;
+          }
+
+          .close-ingredients-drawer span:first-of-type {
+            transform-origin: center center;
+            transform: rotate(45deg);
+          }
+
+          .close-ingredients-drawer span:last-of-type {
+            transform-origin: center center;
+            transform: rotate(-45deg);
+          }
+        }
+
+        .full-ingredients--sub-title {
+          width: 100%;
+          margin-bottom: 3rem;
+          padding-bottom: 0.25rem;
+          border-bottom: 1px solid $e29green;
+        }
+      }
+    }
+  }
+
+  // How To Use Section
+  .product-how-to {
+    display: flex;
+    margin-top: 10rem;
+
+    .product-how-to__col-01 {
+      width: 50%;
+    }
+    .product-how-to__col-02 {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .col-02--inner-wrapper {
+        width: 60%;
+      }
+    }
+  }
+}
+
+// Accordion Buttons
+.accordion__button:after {
+  content: '\002B';
+  display: block;
+  font-family: $font__main--reg;
+  font-size: 1.4rem;
+}
+
+.accordion__button.active:after {
+  content: '\2212' !important;
+}

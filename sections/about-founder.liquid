@@ -1,0 +1,35 @@
+<div class="founder--wrapper">
+  <div class="founder__block">
+    <div class="founder__col-01">
+      <img src="{{section.settings.founder-image | img_url: 'master'}}" alt="">
+    </div>
+    <div class="founder__col-02">
+      <h2>{{ section.settings.founder-title }}</h2>
+      <p>{{ section.settings.founder-text }}</p>
+    </div>
+  </div>
+</div>
+
+
+{% schema %} 
+  {
+    "name": "Our Founder",
+    "settings": [
+      {
+        "id": "founder-image",
+        "type": "image_picker",
+        "label": "Founder Image"
+      },
+      {
+        "id": "founder-title",
+        "type": "textarea",
+        "label": "Our Founder Title"
+      },
+      {
+        "id": "founder-text",
+        "type": "textarea",
+        "label": "Our Founder Text"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,23 @@
+.page-info {
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  a {
+    color: $e29green;
+  }
+
+  h1,
+  h2,
+  h3 {
+    margin: 3rem 0;
+  }
+
+  .info-page--wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin: 10rem auto 10rem;
+  }
+}

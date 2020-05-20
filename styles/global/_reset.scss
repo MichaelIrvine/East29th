@@ -88,8 +88,9 @@ select {
 button {
   border: none;
   background-color: transparent;
+  padding: 0;
   &:focus {
-    outline: none;
+    outline: 1px dashed $e29green;
   }
   &:hover {
     cursor: pointer;
@@ -100,6 +101,10 @@ button {
 
 a {
   color: #ffffff;
+
+  &:focus {
+    outline: 1px dashed $e29green;
+  }
 }
 
 input,

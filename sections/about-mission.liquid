@@ -1,0 +1,51 @@
+<div class="mission--wrapper">
+  <div class="mission--row-01">
+    <div class="mission__row-01__col-01">
+      <h2>{{ section.settings.mission-title }}</h2>
+    </div>
+    <div class="mission__row-01__col-02">
+      <h3>{{ section.settings.mission-text-para1 }}</h3>
+      <h3>{{ section.settings.mission-text-para2 }}</h3>
+    </div>
+  </div>
+  <div class="mission--row-02">
+    <img src="{{section.settings.mission-image | img_url: 'master'}}" alt="">
+  </div>
+  <div class="mission--row-03">
+    <h3>{{section.settings.values-text}}</h3>
+  </div>
+</div>
+
+
+{% schema %} 
+  {
+    "name": "Mission and Values",
+    "settings": [
+      {
+        "id": "mission-title",
+        "type": "textarea",
+        "label": "Who We Are Title"
+      },
+      {
+        "id": "mission-text-para1",
+        "type": "textarea",
+        "label": "Who We Are Text First Paragraph"
+      },
+      {
+        "id": "mission-text-para2",
+        "type": "textarea",
+        "label": "Who We Are Text Second Paragraph"
+      },
+      {
+        "id": "mission-image",
+        "type": "image_picker",
+        "label": "Mission Image"
+      },
+      {
+        "id": "values-text",
+        "type": "textarea",
+        "label": "Values Paragraph"
+      }
+    ]
+  }
+{% endschema %}

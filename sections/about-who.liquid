@@ -1,0 +1,86 @@
+<div class="who-we-are--wrapper">
+  <div class="who-we-are--row-01">
+    <div class="who-we-are__row-01__col-01">
+      <h2>{{ section.settings.who-we-are-title }}</h2>
+    </div>
+    <div class="who-we-are__row-01__col-02">
+      <h3>{{ section.settings.who-we-are-text-para1 }}</h3>
+      <h3>{{ section.settings.who-we-are-text-para2 }}</h3>
+    </div>
+  </div>
+  <div class="who-we-are--row-02">
+    <div class="who-we-are__row-02__col-01">
+      <div class="first-block--inner-wrapper">
+        <img src="{{section.settings.who-we-are-first-image | img_url: 'master'}}" alt="">
+        <p>{{section.settings.who-we-are-first-image-text}}</p>
+      </div>
+    </div>
+    <div class="who-we-are__row-02__col-02">
+      <div class="second-block--inner-wrapper">
+        <img src="{{section.settings.who-we-are-second-image | img_url: 'master'}}" alt="">
+        <p>{{section.settings.who-we-are-second-image-text}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="who-we-are--row-03">
+    <div class="who-we-are__row-01__col-01">
+      <div class="third-block--inner-wrapper">
+        <img src="{{section.settings.who-we-are-third-image | img_url: 'master'}}" alt="">
+        <p>{{section.settings.who-we-are-third-image-text}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %} 
+  {
+    "name": "Who We Are",
+    "settings": [
+      {
+        "id": "who-we-are-title",
+        "type": "textarea",
+        "label": "Who We Are Title"
+      },
+      {
+        "id": "who-we-are-text-para1",
+        "type": "textarea",
+        "label": "Who We Are Text First Paragraph"
+      },
+      {
+        "id": "who-we-are-text-para2",
+        "type": "textarea",
+        "label": "Who We Are Text Second Paragraph"
+      },
+      {
+        "id": "who-we-are-first-image",
+        "type": "image_picker",
+        "label": "Who We Are First Image"
+      },
+      {
+        "id": "who-we-are-first-image-text",
+        "type": "textarea",
+        "label": "Who We Are Image Description"
+      },
+      {
+        "id": "who-we-are-second-image",
+        "type": "image_picker",
+        "label": "Who We Are Second Image"
+      },
+      {
+        "id": "who-we-are-second-image-text",
+        "type": "textarea",
+        "label": "Who We Are Image Description"
+      },
+      {
+        "id": "who-we-are-third-image",
+        "type": "image_picker",
+        "label": "Who We Are Third Image"
+      },
+      {
+        "id": "who-we-are-third-image-text",
+        "type": "textarea",
+        "label": "Who We Are Image Description"
+      }
+    ]
+  }
+{% endschema %}

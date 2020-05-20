@@ -1,22 +1,37 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-  <title>{{ page_title }}</title>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="description" content="{{ page_description | escape }}">
-  <link rel="canonical" href="{{ canonical_url }}">
-  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
-  <script src="https://kit.fontawesome.com/88ac5eaf1e.js" crossorigin="anonymous"></script>
-  {{ content_for_header }} <!-- Header hook for plugins -->
-  {{ 'theme.css' | asset_url | stylesheet_tag }}
-  {{ 'application.js' | asset_url | script_tag }}
-</head>
-<body class="{{ template | handleize }}">
-  {% section 'header' %}
-  <main role="main">
-    {{ content_for_layout }}
-  </main>
-  {% section 'footer' %}
-</body>
+  <head>
+    <title>{{ page_title }} | East 29th</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="{{ page_description | escape }}" />
+    <link rel="canonical" href="{{ canonical_url }}" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,shrink-to-fit=no"
+    />
+    <script
+      src="https://kit.fontawesome.com/88ac5eaf1e.js"
+      crossorigin="anonymous"
+    ></script>
+    {{
+      content_for_header
+    }}
+    <!-- Header hook for plugins -->
+    {{
+      'theme.css' | asset_url | stylesheet_tag
+    }}
+    {{
+      'swiper.css' | asset_url | stylesheet_tag
+    }}
+  </head>
+  <body class="{{ template | handleize }}">
+    {% section 'header' %}
+    <main role="main">
+      {{ content_for_layout }}
+    </main>
+    {% section 'footer' %}
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    {{ 'scripts.js' | asset_url | script_tag }}
+  </body>
 </html>

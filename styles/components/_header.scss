@@ -1,25 +1,43 @@
 .header__main {
   width: 100%;
-  height: 66px;
+  height: 106px;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   z-index: 999;
-  padding: 3rem 3.5rem;
+  padding: 0 3.5rem;
 
   display: flex;
   justify-content: space-around;
 
+  transition: all 300ms ease-in;
+
+  border: 1px solid black;
+
   .header__logo--wrapper {
     flex: 1;
     cursor: pointer;
+    display: flex;
+
+    a {
+      display: flex;
+    }
 
     svg#east29-logo {
       width: 90px;
+      max-width: 90px;
+      transition: all 300ms ease-in-out;
+
       path {
         fill: $e29yellow;
       }
+    }
+
+    svg#east29-logo__fixed {
+      width: 80px;
+      max-width: 80px;
+      display: none;
     }
   }
 
@@ -62,7 +80,7 @@ svg#cart-icon {
   background-color: $e29green;
 }
 
-.header__navigation--wrapper {
+.nav-drawer {
   position: absolute;
   top: 0;
   right: 0;
@@ -74,6 +92,7 @@ svg#cart-icon {
   flex-direction: column;
   border: 1px solid $e29green;
   padding: 5rem;
+  transition: transform 350ms ease-in-out;
 
   .close-nav {
     width: 16px;
@@ -114,4 +133,52 @@ svg#cart-icon {
       text-transform: uppercase;
     }
   }
+}
+
+.cart-drawer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate3d(100%, 0, 0);
+  background-color: $white;
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $e29green;
+  padding: 5rem;
+  transition: transform 350ms ease-in-out;
+
+  .close-cart {
+    width: 16px;
+    height: 16px;
+    position: relative;
+    margin-left: 100%;
+  }
+
+  .close-cart > span {
+    width: 16px;
+    height: 1px;
+    display: block;
+    background-color: $e29green;
+    position: absolute;
+    top: 8px;
+  }
+
+  .close-cart span:first-of-type {
+    transform-origin: center center;
+    transform: rotate(45deg);
+  }
+
+  .close-cart span:last-of-type {
+    transform-origin: center center;
+    transform: rotate(-45deg);
+  }
+}
+
+.nav-drawer.open {
+  transform: translate3d(0, 0, 0);
+}
+.cart-drawer.open {
+  transform: translate3d(0, 0, 0);
 }

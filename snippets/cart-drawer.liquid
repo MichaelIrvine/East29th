@@ -1,0 +1,62 @@
+<div class="header__cart-drawer--wrapper">
+  {% if cart.item_count > 0 %}
+  <h3>Your cart</h3>
+  <form action="/cart" method="post" novalidate>
+    {% for item in cart.items %}
+
+    <div class="cart-drawer__main-content--wrapper">
+      <div class="main-content__col-01">
+        <a href="{{ item.url | within: collections.all }}">
+          <img
+            src="{{ item | img_url: 'medium' }}"
+            alt="{{ item.title | escape }}"
+          />
+        </a>
+      </div>
+      <div class="main-content__col-02">
+        <div class="cart-drawer__title--wrapper">
+          <a href="{{ item.url }}">
+            <p class="cart-drawer__product-title">
+              {{ item.product.title }}
+            </p>
+          </a>
+          <p class="cart-drawer__product-type">{{ item.product.type }}</p>
+        </div>
+        <input
+          type="number"
+          name="updates[]"
+          id="updates_{{ item.key }}"
+          value="{{ item.quantity }}"
+          min="0"
+        />
+        <p>
+          {% if item.original_line_price != item.line_price %}{{
+            item.original_line_price | money
+          }}{% endif %}
+          {{ item.line_price | money }}
+          {% for discount in item.discounts %}{{ discount.title }}{% endfor %}
+          {% endfor %}
+        </p>
+      </div>
+    </div>
+
+    <div class="cart-drawer__subtotal--wrapper">
+      <div class="subtotal__col-01">
+        <p>Subtotal</p>
+      </div>
+      <div class="subtotal__col-02">
+        <p>{{ cart.total_price | money }}</p>
+      </div>
+    </div>
+    <button
+      type="submit"
+      name="checkout"
+      class="cart-drawer__checkout-button button-main no-border"
+    >
+      Checkout
+    </button>
+  </form>
+  {% else %}
+  <h2>cart</h2>
+  Your Cart is empty {% endif %}
+</div>

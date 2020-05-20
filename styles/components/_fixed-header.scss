@@ -1,0 +1,15 @@
+.fixed-header .header__main {
+  position: fixed;
+  top: 0;
+  height: 60px;
+  max-height: 60px;
+  background-color: $white !important;
+}
+
+.fixed-header #east29-logo {
+  display: none;
+}
+
+.fixed-header #east29-logo__fixed {
+  display: block !important;
+}
