@@ -9,11 +9,19 @@ import drawer from './drawer';
 import accordion from './accordion';
 import commentSwiper from './comments';
 import ingredientDrawer from './ingredientDrawer';
+// About Page
+import fixedSubNav from './fixedSubNav';
+import anchorLinks from './anchorLinks';
 
 if (window.location.pathname === '/products/vital-serum') {
   accordion();
   commentSwiper();
   ingredientDrawer();
+}
+
+if (window.location.pathname === '/pages/about') {
+  fixedSubNav();
+  anchorLinks();
 }
 
 fixedHeader();

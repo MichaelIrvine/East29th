@@ -273,6 +273,88 @@ var ingredientDrawer = function ingredientDrawer() {
 
 var _default = ingredientDrawer;
 exports.default = _default;
+},{}],"fixedSubNav.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var fixedSubNav = function fixedSubNav() {
+  var subNavBar = document.querySelector('.about-page-nav-bar');
+  var subNavBarHeight = subNavBar.clientHeight;
+  var topSubNav = subNavBar.offsetTop;
+  var bumpedSection = document.querySelector('.who-we-are--wrapper');
+
+  function fixed() {
+    if (window.scrollY >= 200) {
+      var headerBar = document.querySelector('.header__main');
+      var headerHeight = headerBar.offsetHeight;
+
+      if (window.scrollY >= topSubNav - headerHeight - 2) {
+        bumpedSection.style.paddingTop = "".concat(subNavBarHeight, "px");
+        document.body.classList.add('fixed-sub-nav');
+        subNavBar.style.top = "".concat(headerHeight, "px");
+      } else {
+        document.body.classList.remove('fixed-sub-nav');
+        subNavBar.style.top = 0;
+        bumpedSection.style.paddingTop = 0;
+      }
+    }
+  }
+
+  window.addEventListener('scroll', fixed);
+};
+
+var _default = fixedSubNav;
+exports.default = _default;
+},{}],"anchorLinks.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var anchorLinks = function anchorLinks() {
+  function activeLink() {
+    var whoSection = document.querySelector('.who-we-are--wrapper');
+    var missionSection = document.querySelector('.mission--wrapper');
+    var founderSection = document.querySelector('.founder--wrapper');
+    var whoLink = document.getElementById('who-link');
+    var missionLink = document.getElementById('mission-link');
+    var founderLink = document.getElementById('founder-link');
+    var windowBottom = window.scrollY + window.innerHeight;
+    var whoSectionBottom = whoSection.offsetTop + whoSection.clientHeight;
+    var missionSectionBottom = missionSection.offsetTop + missionSection.clientHeight;
+    var founderSectionBottom = founderSection.offsetTop + founderSection.clientHeight; // Who We Are
+
+    if (windowBottom >= whoSection.offsetTop && windowBottom < whoSectionBottom) {
+      whoLink.classList.add('active');
+    } else {
+      whoLink.classList.remove('active');
+    } // Missions And Values
+
+
+    if (windowBottom >= missionSection.offsetTop && windowBottom < missionSectionBottom) {
+      missionLink.classList.add('active');
+    } else {
+      missionLink.classList.remove('active');
+    }
+
+    if (windowBottom >= founderSection.offsetTop && windowBottom < founderSectionBottom) {
+      founderLink.classList.add('active');
+    } else {
+      founderLink.classList.remove('active');
+    }
+  }
+
+  window.addEventListener('scroll', activeLink);
+};
+
+var _default = anchorLinks;
+exports.default = _default;
 },{}],"scripts.js":[function(require,module,exports) {
 "use strict";
 
@@ -286,6 +368,10 @@ var _comments = _interopRequireDefault(require("./comments"));
 
 var _ingredientDrawer = _interopRequireDefault(require("./ingredientDrawer"));
 
+var _fixedSubNav = _interopRequireDefault(require("./fixedSubNav"));
+
+var _anchorLinks = _interopRequireDefault(require("./anchorLinks"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 console.log('East 29th Store - Developed by Michael Irvine - https://michaelirvinedesign.ca | Designed by ZAK - https://wearezak.com/'); // Header Fixed Nav
@@ -296,9 +382,14 @@ if (window.location.pathname === '/products/vital-serum') {
   (0, _ingredientDrawer.default)();
 }
 
+if (window.location.pathname === '/pages/about') {
+  (0, _fixedSubNav.default)();
+  (0, _anchorLinks.default)();
+}
+
 (0, _fixedHeader.default)();
 (0, _drawer.default)();
-},{"./fixedHeader":"fixedHeader.js","./drawer":"drawer.js","./accordion":"accordion.js","./comments":"comments.js","./ingredientDrawer":"ingredientDrawer.js"}],"../../../../../../../../../.nvm/versions/node/v12.16.1/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./fixedHeader":"fixedHeader.js","./drawer":"drawer.js","./accordion":"accordion.js","./comments":"comments.js","./ingredientDrawer":"ingredientDrawer.js","./fixedSubNav":"fixedSubNav.js","./anchorLinks":"anchorLinks.js"}],"../../../../../../../../../.nvm/versions/node/v12.16.1/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -326,7 +417,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62932" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51929" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

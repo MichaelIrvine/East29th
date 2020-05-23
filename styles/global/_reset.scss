@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 /* Box sizing rules */
 *,
 *::before,
@@ -90,7 +94,7 @@ button {
   background-color: transparent;
   padding: 0;
   &:focus {
-    outline: 1px dashed $e29green;
+    outline: none;
   }
   &:hover {
     cursor: pointer;
@@ -103,7 +107,7 @@ a {
   color: #ffffff;
 
   &:focus {
-    outline: 1px dashed $e29green;
+    outline: none;
   }
 }
 

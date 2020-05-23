@@ -1,46 +1,127 @@
-{% if cart.item_count > 0 %}
-  <h1>cart</h1>
-  <form action="/cart" method="post" novalidate>
-    <table>
-      <thead>
-        <th colspan="2">Prod</th>
-        <th>Price</th>
-        <th>Qty</th>
-        <th>total</th>
-      </thead>
-      <tbody>
-        {% for item in cart.items %}
-          <tr>
-            <td>
-              <a href="{{ item.url | within: collections.all }}">
-                <img src="{{ item | img_url: 'medium' }}" alt="{{ item.title | escape }}">
-              </a>
-            </td>
-            <td>
-              <a href="{{ item.url }}">{{ item.product.title }}</a>
-              {{ item.variant.title }}
-              <a href="/cart/change?line={{ forloop.index }}&amp;quantity=0">remove</a>
-            </td>
-            <td>{{ item.price | money }}</td>
-            <td>
-              <input type="number" name="updates[]" id="updates_{{ item.key }}" value="{{ item.quantity }}" min="0">
-            </td>
-            <td>
-              {% if item.original_line_price != item.line_price %}{{ item.original_line_price | money }}{% endif %}
-              {{ item.line_price | money }}
-              {% for discount in item.discounts %}{{ discount.title }}{% endfor %}
-            </td>
-          </tr>
-        {% endfor %}
-      </tbody>
-    </table>
-    <div>
-      <p>sub total : {{ cart.total_price | money }}</p>
-      <button type="submit" name="update">Update</button>
-      <button type="submit" name="checkout">Checkout</button>
+<div class="cart--wrapper">
+  {% if cart.item_count > 0 %}
+  <h1>Your cart</h1>
+  <form action="/cart" method="post" novalidate class="cart-form__main">
+    <div class="cart-form__main--cart-contents">
+      {% for item in cart.items %}
+      <div class="cart-contents__col-01">
+        <a href="{{ item.url | within: collections.all }}">
+          <img
+            src="{{ item | img_url: 'medium' }}"
+            alt="{{ item.title | escape }}"
+          />
+        </a>
+      </div>
+      <div class="cart-contents__col-02">
+        <div class="cart-contents__title--wrapper">
+          <a href="{{ item.url }}">
+            <h2 class="cart-contents__product-title">
+              {{ item.product.title }}
+            </h2>
+          </a>
+          <p class="cart-contents__product-type">{{ item.product.type }}</p>
+          <a
+            id="removeItems"
+            href="/cart/change?line={{ forloop.index }}&amp;quantity=0"
+            >remove</a
+          >
+        </div>
+
+        <!-- <span>{{ item.price | money }}</span> -->
+        <div class="product-controls">
+          <div class="quantity--wrapper">
+            <div class="decrement">
+              <button
+                id="decreaseQuantity"
+                type="button"
+                aria-label="decrease quantity"
+                onclick="decrement(0)"
+              >
+                <svg id="decrement-arrow" width="9.019" height="11.819">
+                  <g data-name="decrement-arrow">
+                    <path
+                      d="M8.729.412L.872 5.831l7.857 5.581"
+                      fill="none"
+                      stroke="black"
+                      stroke-miterlimit="10"
+                    />
+                  </g>
+                </svg>
+              </button>
+            </div>
+            <input
+              type="number"
+              name="updates[]"
+              id="updates_{{ item.key }}"
+              value="{{ item.quantity }}"
+              min="0"
+              class="QuantityCount__Main"
+            />
+            <div class="increment">
+              <button
+                id="increaseQuantity"
+                type="button"
+                aria-label="increase quantity"
+                onclick="increment(10)"
+              >
+                <svg id="increment-arrow" width="9.019" height="11.819">
+                  <g data-name="increment-arrow">
+                    <path
+                      d="M.29.412l7.857 5.419L.29 11.412"
+                      fill="none"
+                      stroke="black"
+                      stroke-miterlimit="10"
+                    />
+                  </g>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <button type="submit" name="update" class="button-main no-border">
+            Update Cart
+          </button>
+        </div>
+        <!-- 
+        {% if item.original_line_price != item.line_price %}
+        <p>{{ item.original_line_price | money }}</p>
+        {% endif %}
+        <p>{{ item.line_price | money }}</p>
+        {% for discount in item.discounts %}{{ discount.title }}{% endfor %} -->
+      </div>
     </div>
+    {% endfor %}
+    <div class="cart-contents__subtotal--wrapper">
+      <div class="subtotal__col-01">
+        <p>Subtotal</p>
+      </div>
+      <div class="subtotal__col-02">
+        <p>{{ cart.total_price | money }}</p>
+      </div>
+    </div>
+
+    <button type="submit" name="checkout" class="button-main no-border">
+      Checkout
+    </button>
   </form>
-{% else %}
-  <h2>cart</h2>
-  Cart is empty
-{% endif %}
+  {% else %}
+  <h2>Your Cart</h2>
+  Cart is empty {% endif %}
+</div>
+
+<script>
+  function increment(max) {
+    document.querySelector('.QuantityCount__Main').value =
+      parseInt(document.querySelector('.QuantityCount__Main').value) + 1;
+    if (document.querySelector('.QuantityCount__Main').value >= parseInt(max)) {
+      document.querySelector('.QuantityCount__Main').value = max;
+    }
+  }
+  function decrement(min) {
+    document.querySelector('.QuantityCount__Main').value =
+      parseInt(document.querySelector('.QuantityCount__Main').value) - 1;
+    if (document.querySelector('.QuantityCount__Main').value <= parseInt(min)) {
+      document.querySelector('.QuantityCount__Main').value = min;
+    }
+  }
+</script>

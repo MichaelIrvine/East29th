@@ -1,13 +1,10 @@
 .page-contact {
-  .header__main {
-    // Might switch these off later
-    position: relative;
-    height: auto;
-  }
+  padding-top: 106px;
+
   .contact-page--wrapper {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
     width: 75%;
     margin: 6rem auto;
 
@@ -15,8 +12,17 @@
       display: flex;
       margin-bottom: 8rem;
 
+      @media (max-width: $tablet) {
+        flex-direction: column;
+        margin-bottom: 3.5rem;
+      }
+
       .contact-page-info__col-01 {
         width: 50%;
+
+        @media (max-width: $tablet) {
+          width: 100%;
+        }
 
         h1 {
           color: $e29green;
@@ -26,6 +32,11 @@
       }
       .contact-page-info__col-02 {
         width: 50%;
+
+        @media (max-width: $tablet) {
+          width: 100%;
+          margin-top: 3.5rem;
+        }
       }
     }
 

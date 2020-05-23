@@ -22,13 +22,54 @@
           </a>
           <p class="cart-drawer__product-type">{{ item.product.type }}</p>
         </div>
-        <input
-          type="number"
-          name="updates[]"
-          id="updates_{{ item.key }}"
-          value="{{ item.quantity }}"
-          min="0"
-        />
+        <div class="cart-drawer__quantity--wrapper">
+          <div class="decrement">
+            <button
+              id="decreaseQuantity"
+              type="button"
+              aria-label="decrease quantity"
+              onclick="cartDrawerDecrement(0)"
+            >
+              <svg id="decrement-arrow" width="9.019" height="11.819">
+                <g data-name="decrement-arrow">
+                  <path
+                    d="M8.729.412L.872 5.831l7.857 5.581"
+                    fill="none"
+                    stroke="black"
+                    stroke-miterlimit="10"
+                  />
+                </g>
+              </svg>
+            </button>
+          </div>
+          <input
+            type="number"
+            name="updates[]"
+            id="updates_{{ item.key }}"
+            value="{{ item.quantity }}"
+            min="0"
+            class="QuantityCount__Drawer"
+          />
+          <div class="increment">
+            <button
+              id="increaseQuantity"
+              type="button"
+              aria-label="increase quantity"
+              onclick="cartDrawerIncrement(10)"
+            >
+              <svg id="increment-arrow" width="9.019" height="11.819">
+                <g data-name="increment-arrow">
+                  <path
+                    d="M.29.412l7.857 5.419L.29 11.412"
+                    fill="none"
+                    stroke="black"
+                    stroke-miterlimit="10"
+                  />
+                </g>
+              </svg>
+            </button>
+          </div>
+        </div>
         <p>
           {% if item.original_line_price != item.line_price %}{{
             item.original_line_price | money

@@ -1,0 +1,37 @@
+// Main Header
+.fixed-header .header__main {
+  position: fixed;
+  top: 0;
+  height: 60px;
+  max-height: 60px;
+  background-color: $white !important;
+}
+
+.fixed-header #east29-logo {
+  display: none;
+}
+
+.fixed-header #east29-logo__fixed {
+  display: inline-block !important;
+}
+
+.fixed-header #cart-icon {
+  path {
+    fill: $e29green !important;
+  }
+}
+
+.fixed-header #nav-toggle {
+  span {
+    background-color: $e29green !important;
+  }
+}
+
+// About page Sub Nav Bar
+.fixed-sub-nav .about-page-nav-bar {
+  position: fixed;
+
+  @media (max-width: $mobileLarge) {
+    position: relative;
+  }
+}

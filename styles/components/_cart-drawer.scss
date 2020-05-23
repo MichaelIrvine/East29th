@@ -35,15 +35,28 @@
     .main-content__col-02 {
       width: 60%;
       padding-left: 2.5rem;
+      display: flex;
+      flex-direction: column;
 
       .cart-drawer__title--wrapper {
         display: flex;
         justify-content: flex-start;
+        flex-wrap: wrap;
 
         .cart-drawer__product-title {
           text-transform: uppercase;
           margin-right: 1rem;
         }
+
+        .cart-drawer__product-type {
+          white-space: nowrap;
+        }
+      }
+
+      p {
+        flex: 1;
+        display: flex;
+        align-items: flex-end;
       }
     }
   }

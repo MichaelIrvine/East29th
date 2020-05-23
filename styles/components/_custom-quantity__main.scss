@@ -1,0 +1,67 @@
+.product-controls {
+  display: flex;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+  .quantity--wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $e29green;
+    border-right: none;
+
+    .decrement {
+      padding-left: 2rem;
+      padding-right: 1rem;
+
+      #decrement-arrow {
+        path {
+          stroke: $grey;
+        }
+      }
+    }
+
+    .decrement:hover #decrement-arrow path {
+      stroke: $e29green;
+    }
+
+    .QuantityCount__Main {
+      border: none;
+      font-size: 1rem;
+      font-family: $font__main--reg;
+      text-align: center;
+      width: 35px;
+    }
+
+    .increment {
+      padding-right: 2rem;
+      padding-left: 1rem;
+
+      #increment-arrow {
+        path {
+          stroke: $grey;
+        }
+      }
+    }
+
+    .increment:hover #increment-arrow path {
+      stroke: $e29green;
+    }
+  }
+
+  button[type='submit'] {
+    margin: 0;
+    // padding-right: 2rem;
+    // padding-left: 2rem;
+  }
+}
+
+input[type='number'] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
