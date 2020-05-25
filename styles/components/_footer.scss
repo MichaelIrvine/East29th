@@ -11,6 +11,7 @@
 
     @media (max-width: $tablet) {
       display: none;
+      margin-top: 0;
     }
   }
   .footer-row-02 {
@@ -23,6 +24,10 @@
       flex-direction: column;
       justify-content: center;
       padding: 3.5rem 3.5rem;
+    }
+
+    @media (max-width: $mobileLarge) {
+      padding: 1.5rem;
     }
 
     .footer-row-02__col-01 {
@@ -85,10 +90,11 @@
 
           .input-group {
             display: flex;
+            height: 100%;
 
             .newsletter__input {
               font-size: 0.875rem;
-              padding: 0.75rem 0.5rem 0.75rem 0.5rem;
+              padding-left: 0.75rem;
               flex: 1;
               border: none;
             }

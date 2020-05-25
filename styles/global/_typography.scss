@@ -32,7 +32,7 @@ html {
     font-size: 14px;
   }
 
-  @media screen and (max-width: 420px) {
+  @media screen and (max-width: $mobileMed) {
     font-size: 12px;
   }
 }
@@ -43,8 +43,12 @@ h1 {
   color: $font__yellow;
   letter-spacing: 1.25px;
   line-height: 1.2;
-  margin: 1rem 0;
+  margin: 2rem 0;
   text-transform: uppercase;
+
+  @media (max-width: $mobileMed) {
+    font-size: 1.5rem;
+  }
 }
 
 h2 {
@@ -54,6 +58,11 @@ h2 {
   letter-spacing: 1.25px;
   line-height: 1.2;
   text-transform: uppercase;
+  margin: 2rem 0;
+
+  @media (max-width: $mobileMed) {
+    font-size: 1.5rem;
+  }
 }
 
 h3 {

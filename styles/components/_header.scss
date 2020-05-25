@@ -13,6 +13,7 @@
 
   @media (max-width: $mobileLarge) {
     height: 60px;
+    padding: 1rem 1.5rem 0 1.5rem;
   }
 
   .header__logo--wrapper {
@@ -86,23 +87,25 @@ svg#cart-icon {
   background-color: $e29green;
 }
 
+.header-drawer--wrapper {
+  position: relative;
+  height: 100vh;
+  width: auto;
+}
+
 .nav-drawer {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   transform: translate3d(100%, 0, 0);
   background-color: $white;
-  width: 50%;
+  width: 0;
   height: 100vh;
   display: flex;
   flex-direction: column;
   border-left: 1px solid $e29green;
   padding: 5rem;
   transition: transform 350ms ease-in-out;
-
-  @media (max-width: $tablet) {
-    width: 100%;
-  }
 
   .close-nav {
     width: 16px;
@@ -151,12 +154,12 @@ svg#cart-icon {
 }
 
 .cart-drawer {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   transform: translate3d(100%, 0, 0);
   background-color: $white;
-  width: 50%;
+  width: 0;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -197,7 +200,15 @@ svg#cart-icon {
 
 .nav-drawer.open {
   transform: translate3d(0, 0, 0);
+  width: 50%;
+  @media (max-width: $tablet) {
+    width: 100%;
+  }
 }
 .cart-drawer.open {
   transform: translate3d(0, 0, 0);
+  width: 50%;
+  @media (max-width: $tablet) {
+    width: 100%;
+  }
 }

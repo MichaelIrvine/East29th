@@ -7,3 +7,6 @@ prepros.cfg
 # Ignore vscode settings
 .vscode
 node_modules
+
+# cache folder
+.cache
