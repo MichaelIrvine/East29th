@@ -2,13 +2,13 @@ const commentSwiper = function () {
   new Swiper('.swiper-container', {
     direction: 'horizontal',
     loop: false,
-    slidesPerView: 3,
+    slidesPerView: 1,
     centeredSlides: true,
     spaceBetween: 100,
     autoplay: true,
     speed: 1000,
     effect: 'slide',
-    // initialSlide: 1,
+    grabCursor: true,
 
     //Pagination
     pagination: {
@@ -16,6 +16,13 @@ const commentSwiper = function () {
       clickable: true,
       renderBullet: function (index, className) {
         return `<div class="custom-bullet ${className}"></div>`;
+      },
+    },
+
+    // breakpoints
+    breakpoints: {
+      768: {
+        slidesPerView: 3,
       },
     },
   });

@@ -1,7 +1,10 @@
 <div id="our-founder" class="founder--wrapper">
   <div class="founder__block">
     <div class="founder__col-01">
-      <img src="{{section.settings.founder-image | img_url: 'master'}}" alt="">
+      <img 
+      data-src="{{section.settings.founder-image | img_url: 'master'}}" 
+      class="lazy lazy-reveal"
+      alt="{{ founder-image.alt | escape}}">
     </div>
     <div class="founder__col-02">
       <h2>{{ section.settings.founder-title }}</h2>

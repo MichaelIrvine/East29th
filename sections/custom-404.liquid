@@ -1,0 +1,28 @@
+
+
+<div class="not-found-page--inner-wrapper ">
+  <div class="404-text col__01">
+    <p>404 Error</p>
+    <h1>Sorry, the page you are looking for can't be found</h1>
+    <h3>Here are some helpful links:</h3>
+    <div class="links_404">
+      {% include 'menu'%}
+    </div>
+  </div>
+  <div class="404-page-image col__02">
+    <img src="{{section.settings.not-found-page-image | img_url: 'master'}}" alt="{{ not-found-page-image.alt | escape }}">
+  </div>
+</div>
+
+{% schema %} 
+  {
+    "name": "404 Page Image",
+    "settings": [
+      {
+        "id": "not-found-page-image",
+        "type": "image_picker",
+        "label": "404 Page Image"
+      }
+    ]
+  }
+{% endschema %}

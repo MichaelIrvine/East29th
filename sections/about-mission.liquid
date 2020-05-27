@@ -10,7 +10,10 @@
     </div>
   </div>
   <div class="mission--row-02">
-    <img src="{{section.settings.mission-image | img_url: 'master'}}" alt="">
+    <img 
+    data-src="{{section.settings.mission-image | img_url: 'master'}}" 
+    class="lazy lazy-reveal"
+    alt="{{mission-image.alt | escape}}">
   </div>
   <div class="mission--row-03">
     <h3>{{section.settings.values-text}}</h3>

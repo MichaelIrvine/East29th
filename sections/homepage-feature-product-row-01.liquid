@@ -1,11 +1,13 @@
 <div class="homepage-feature-product__row-01 featured-product-row">
   <div class="homepage-feature-product__col-01">
-    <img src="{{section.settings.homepage-feature-product-first-row-image | img_url: '1920x'}}" alt="feature product image"/>
+    <img 
+    data-src="{{section.settings.homepage-feature-product-first-row-image | img_url: '620x'}}" 
+    class="lazy lazy-reveal"
+    alt="{{homepage-feature-product-first-row-image.alt | escape}}"/>
   </div>
   <div class="homepage-feature-product__col-02">
   <div class="col_02__inner-wrapper">
       <svg xmlns="http://www.w3.org/2000/svg" width="86.195" height="86.195">
-
           <g data-name="Group 12">
             <g data-name="Group 3">
               <path data-name="Clip 2" d="M0 .001h86.2v86.2H0z" fill="none"/>

@@ -94,12 +94,23 @@
   align-items: center;
   height: 75vh;
 
+  @media (max-width: $tablet) {
+    height: auto;
+    padding: 6rem 3.5rem;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  @media (max-width: $mobileLarge) {
+    width: 100%;
+  }
+
   h3 {
     text-align: center;
     width: 50%;
 
     @media (max-width: $tablet) {
-      width: 65%;
+      width: 100%;
     }
 
     &:before {
@@ -156,13 +167,15 @@
     justify-content: center;
     align-items: flex-start;
 
+    @media (max-width: $tablet) {
+      width: 100%;
+      height: auto;
+      padding: 3.5rem 8rem;
+    }
+
     @media (max-width: $mobileLarge) {
       padding: 8rem 3.5rem;
       height: auto;
-    }
-
-    @media (max-width: $tablet) {
-      width: 100%;
     }
 
     h2 {
@@ -201,6 +214,11 @@
       transform: translate(22.5%, -50%);
       width: 315px;
       max-width: 315px;
+
+      @media (max-width: $tablet) {
+        width: 100%;
+        max-width: 415px;
+      }
 
       @media (max-width: $mobileMed) {
         width: 250px;
@@ -325,7 +343,8 @@
     img {
       max-width: fit-content;
 
-      @media (max-width: $mobileLarge) {
+      @media (max-width: $tablet) {
+        width: 100%;
         max-width: 100%;
       }
     }
@@ -341,7 +360,11 @@
     @media (max-width: $tablet) {
       width: 100%;
       height: auto;
-      padding: 3.5rem;
+      padding: 3.5rem 8rem;
+    }
+
+    @media (max-width: $mobileLarge) {
+      padding: 8rem 3.5rem;
     }
 
     .about-us__col-02--inner-wrapper {
@@ -353,6 +376,10 @@
 
       @media (max-width: $tablet) {
         width: 100%;
+      }
+
+      h2 {
+        margin-top: 0;
       }
 
       p {

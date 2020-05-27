@@ -5,6 +5,10 @@
 .swiper-container {
   width: 100%;
   margin-top: 10rem;
+
+  @media (max-width: $tablet) {
+    margin-top: 0;
+  }
 }
 .swiper-slide {
   text-align: center;
@@ -17,6 +21,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: $mobileLarge) {
+    padding: 3.5rem;
+  }
 
   p {
     margin-top: 1rem;
@@ -58,6 +66,10 @@
   background-color: $white;
   opacity: 1;
   z-index: 9999;
+
+  @media (max-width: $tablet) {
+    display: none;
+  }
 }
 
 .edge-fade:first-of-type {

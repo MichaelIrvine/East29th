@@ -1,6 +1,9 @@
 <div class="homepage-about-us">
   <div class="homepage-about-us__col-01">
-    <img src="{{section.settings.homepage-about-us-image | img_url: 'master'}}" alt="woman using East 29th vital serum"/>
+    <img 
+    data-src="{{section.settings.homepage-about-us-image | img_url: '1200x'}}" 
+    class="lazy lazy-reveal"
+    alt="{{homepage-about-us-image.alt | escape}}"/>
   </div>
   <div class="homepage-about-us__col-02">
     <div class="about-us__col-02--inner-wrapper">

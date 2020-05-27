@@ -99,7 +99,7 @@ svg#cart-icon {
   right: 0;
   transform: translate3d(100%, 0, 0);
   background-color: $white;
-  width: 0;
+  width: 50%;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -159,7 +159,7 @@ svg#cart-icon {
   right: 0;
   transform: translate3d(100%, 0, 0);
   background-color: $white;
-  width: 0;
+  width: 50%;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -169,6 +169,10 @@ svg#cart-icon {
 
   @media (max-width: $tablet) {
     width: 100%;
+  }
+
+  @media (max-width: $mobileLarge) {
+    padding: 3.5rem;
   }
 
   .close-cart {
@@ -200,14 +204,14 @@ svg#cart-icon {
 
 .nav-drawer.open {
   transform: translate3d(0, 0, 0);
-  width: 50%;
+
   @media (max-width: $tablet) {
     width: 100%;
   }
 }
 .cart-drawer.open {
   transform: translate3d(0, 0, 0);
-  width: 50%;
+
   @media (max-width: $tablet) {
     width: 100%;
   }

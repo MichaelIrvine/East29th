@@ -23,7 +23,7 @@ a.button-main {
     border: 1px solid $e29green;
   }
 
-  @media (max-width: $mobileLarge) {
+  @media (max-width: $tablet) {
     width: 100%;
     max-width: 100%;
     padding: 1.5rem;
@@ -55,7 +55,7 @@ a.button-main {
     border: 1px solid $e29green;
   }
 
-  @media (max-width: $mobileLarge) {
+  @media (max-width: $tablet) {
     width: 100%;
     max-width: 100%;
     padding: 1.5rem;

@@ -4,3 +4,8 @@ textarea {
   border-radius: 0;
   font-size: 14px !important;
 }
+
+// Recaptcha Challenge Override
+.shopify-challenge__container {
+  margin: 10rem auto !important;
+}

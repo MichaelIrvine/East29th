@@ -1,0 +1,53 @@
+.not-found-page--wrapper {
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  a,
+  span {
+    color: $e29green;
+  }
+
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  margin: 8rem auto 10rem;
+
+  @media (max-width: $mobileLarge) {
+    width: 100%;
+  }
+
+  .not-found-page--inner-wrapper {
+    display: flex;
+    @media (max-width: $desktopSmall) {
+      flex-direction: column;
+    }
+
+    .col__01,
+    .col__02 {
+      width: 50%;
+      padding: 3.5rem;
+
+      @media (max-width: $desktopSmall) {
+        width: 100%;
+      }
+    }
+
+    .col__01 {
+      .links_404 {
+        margin-top: 1.5rem;
+
+        a {
+          display: block;
+          font-size: 1.5rem;
+          margin: 1rem 0;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}

@@ -42,6 +42,10 @@
     border-top: 1px solid $grey;
     border-bottom: 1px solid $grey;
 
+    @media (max-width: 600px) {
+      flex-direction: column;
+    }
+
     .cart-contents__col-01 {
       img {
         display: inline-block;
@@ -54,6 +58,10 @@
       align-items: flex-start;
       justify-content: flex-start;
 
+      @media (max-width: 600px) {
+        padding-left: 0;
+      }
+
       .cart-contents__title--wrapper {
         display: flex;
         flex-direction: column;
@@ -63,6 +71,14 @@
         .cart-contents__product-title {
           text-transform: uppercase;
           margin-right: 1rem;
+
+          @media (max-width: 600px) {
+            margin-bottom: 0;
+          }
+        }
+
+        #removeItems {
+          margin: 1rem 0;
         }
       }
     }

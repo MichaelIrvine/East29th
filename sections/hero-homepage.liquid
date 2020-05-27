@@ -1,8 +1,9 @@
 <div id="hero-homepage" class="hero-homepage">
   <div class="hero-homepage__col-01">
         <img
-          src="{{ section.settings.hero-homepage-image | img_url: '1920x' }}"
-          alt="East 29th vital serum"
+          data-src="{{ section.settings.hero-homepage-image | img_url: '800x' }}"
+          alt="{{ hero-homepage-image.alt | escape }}"
+          class="lazy lazy-reveal"
         /> 
     <div class="arrow-down">
       <svg xmlns="http://www.w3.org/2000/svg" width="24.413" height="98.707">

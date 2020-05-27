@@ -1,0 +1,32 @@
+.cc-window.cc-banner {
+  width: 90% !important;
+}
+
+.cc-banner.cc-bottom {
+  left: 50% !important;
+  transform: translateX(-50%);
+  bottom: 25px !important;
+}
+
+.cc-btn {
+  background-color: $e29green !important;
+  font-family: $font__main--med !important;
+  color: $e29yellow !important;
+  text-transform: uppercase !important;
+  text-align: center !important;
+
+  border: 1px solid $e29green !important;
+
+  font-size: 0.8rem !important;
+  padding: 0.75rem 1.5rem !important;
+  margin: 0 !important;
+  width: 180px !important;
+  max-width: 180px !important;
+  transition: all 100ms ease-in-out;
+
+  &:hover {
+    border: 1px solid $e29green !important;
+    background-color: $white !important;
+    color: $e29green !important;
+  }
+}

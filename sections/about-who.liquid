@@ -12,13 +12,19 @@
   <div class="who-we-are--row-02">
     <div class="who-we-are__row-02__col-01">
       <div class="first-block--inner-wrapper">
-        <img src="{{section.settings.who-we-are-first-image | img_url: 'master'}}" alt="">
+        <img 
+        data-src="{{section.settings.who-we-are-first-image | img_url: '720x'}}" 
+        class="lazy lazy-reveal"
+        alt="{{who-we-are-first-image.alt | escape}}">
         <p>{{section.settings.who-we-are-first-image-text}}</p>
       </div>
     </div>
     <div class="who-we-are__row-02__col-02">
       <div class="second-block--inner-wrapper">
-        <img src="{{section.settings.who-we-are-second-image | img_url: 'master'}}" alt="">
+        <img 
+        data-src="{{section.settings.who-we-are-second-image | img_url: '720x'}}" 
+        class="lazy lazy-reveal"
+        alt="{{who-we-are-second-image.alt | escape}}">
         <p>{{section.settings.who-we-are-second-image-text}}</p>
       </div>
     </div>
@@ -26,7 +32,10 @@
   <div class="who-we-are--row-03">
     <div class="who-we-are__row-01__col-01">
       <div class="third-block--inner-wrapper">
-        <img src="{{section.settings.who-we-are-third-image | img_url: 'master'}}" alt="">
+        <img 
+        data-src="{{section.settings.who-we-are-third-image | img_url: '720x'}}" 
+        class="lazy lazy-reveal"
+        alt="{{who-we-are-third-image.alt | escape}}">
         <p>{{section.settings.who-we-are-third-image-text}}</p>
       </div>
     </div>

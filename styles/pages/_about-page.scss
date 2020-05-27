@@ -13,22 +13,39 @@
     justify-content: center;
     width: 100%;
     height: 100vh;
+    overflow: hidden;
+
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      height: auto;
+    }
 
     .hero-about__col-01 {
       position: relative;
-      width: auto;
+      width: 30%;
       height: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
 
-      // @media (min-width: $tablet) {
-      //   width: 50%;
-      // }
+      @media (max-width: $tablet) {
+        width: 100%;
+        padding: 10rem 3.5rem 6rem;
+        justify-content: flex-start;
+      }
+
+      @media (max-width: $mobileLarge) {
+        padding: 10rem 1.5rem 6rem;
+      }
 
       h1 {
         width: 60%;
         white-space: nowrap;
+        margin-left: 6rem;
+
+        @media (max-width: $tablet) {
+          margin-left: 0;
+        }
       }
 
       .arrow-down {
@@ -51,24 +68,30 @@
     }
 
     .hero-about__col-02 {
-      flex: 1;
       height: 100%;
+      width: 70%;
       position: relative;
+      display: flex;
+      justify-content: flex-end;
+      align-self: flex-end;
 
-      // @media (min-width: $tablet) {
-      //   width: 50%;
-      // }
+      @media (max-width: $tablet) {
+        width: 100%;
+      }
+
       img {
-        position: absolute;
-        bottom: 0;
-        right: 0;
         height: 90vh;
+        align-self: flex-end;
+
+        @media (max-width: $tablet) {
+          height: auto;
+        }
       }
 
       .background-fill {
         background-color: $e29yellow;
         height: 100vh;
-        width: 100%;
+        width: 70%;
         position: absolute;
         top: 0;
         right: 0;
@@ -119,6 +142,10 @@
 
   .who-we-are--wrapper {
     margin: 10rem 0;
+
+    @media (max-width: $tablet) {
+      margin: 3.5rem 0;
+    }
 
     .who-we-are--row-01 {
       display: flex;
@@ -174,9 +201,14 @@
       margin-bottom: 1rem;
       margin-right: 3.5rem;
 
+      @media (max-width: $tablet) {
+        margin-left: 3.5rem;
+      }
+
       @media (max-width: 680px) {
         flex-direction: column;
         margin-right: 0;
+        margin-left: 0;
       }
 
       .who-we-are__row-02__col-01 {
@@ -385,12 +417,19 @@
       align-items: center;
       height: 75vh;
 
+      @media (max-width: $tablet) {
+        height: auto;
+        padding: 6rem 3.5rem;
+        width: 80%;
+        margin: 0 auto;
+      }
+
       h3 {
         text-align: center;
         width: 50%;
 
         @media (max-width: $tablet) {
-          width: 65%;
+          width: 100%;
         }
 
         &:before {
@@ -505,5 +544,16 @@
   @media (max-width: $mobileLarge) {
     color: $white;
     text-decoration: none;
+  }
+}
+
+// Class to account for the page flow shift for sticky sub nav
+.flow-adjuster {
+  &.bumped {
+    height: 50px;
+
+    @media (max-width: $mobileLarge) {
+      height: 0;
+    }
   }
 }
