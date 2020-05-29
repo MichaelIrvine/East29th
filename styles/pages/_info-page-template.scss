@@ -1,3 +1,5 @@
+// Templates for Policies Pages
+
 .page-info {
   h1,
   h2,
@@ -21,4 +23,27 @@
     width: 75%;
     margin: 10rem auto 10rem;
   }
+}
+
+// Shopify Policy Page Style -- Override
+.shopify-policy__container {
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  a,
+  span {
+    color: $e29green !important;
+  }
+
+  h1,
+  h2,
+  h3 {
+    margin: 3rem 0 !important;
+  }
+
+  width: 65% !important;
+  max-width: none !important;
+  margin: 10rem auto 10rem !important;
 }

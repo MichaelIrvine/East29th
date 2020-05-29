@@ -36,8 +36,8 @@
 
   .hero-homepage__col-01 {
     position: relative;
-    width: 50%;
-    height: 100%;
+    width: 55%;
+    // height: 100%;
     overflow: hidden;
 
     @media (max-width: 890px) {
@@ -64,9 +64,9 @@
   }
 
   .hero-homepage__col-02 {
-    width: 50%;
+    width: 45%;
     height: 100%;
-    padding: 4rem 5rem;
+    padding: 4rem 2rem;
     background-color: $e29green;
     display: flex;
     flex-direction: column;
@@ -204,6 +204,10 @@
       transform: translate(-50%, -50%);
       width: 92.5%;
       max-width: 425px;
+
+      @media (min-width: 1600px) {
+        max-width: 500px;
+      }
     }
 
     .product-image {
@@ -212,13 +216,17 @@
       top: 50%;
       right: 50%;
       transform: translate(22.5%, -50%);
-      width: 315px;
+      width: 100%;
       max-width: 315px;
 
-      @media (max-width: $tablet) {
-        width: 100%;
-        max-width: 415px;
+      @media (min-width: 1600px) {
+        max-width: 550px;
       }
+
+      // @media (max-width: $tablet) {
+      //   width: 100%;
+      //   max-width: 415px;
+      // }
 
       @media (max-width: $mobileMed) {
         width: 250px;

@@ -64,6 +64,10 @@
         height: 20px;
         margin-left: 5rem;
         cursor: pointer;
+
+        @media (max-width: $mobileLarge) {
+          margin-left: 3rem;
+        }
       }
     }
   }

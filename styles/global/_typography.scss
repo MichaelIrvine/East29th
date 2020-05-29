@@ -91,6 +91,11 @@ span {
   line-height: 1.3;
 }
 
+span.no-caps {
+  font-size: inherit;
+  text-transform: none;
+}
+
 a {
   font-size: 0.875rem;
   letter-spacing: 1px;

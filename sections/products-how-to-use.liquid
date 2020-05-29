@@ -1,7 +1,10 @@
 
 <div class="product-how-to">
   <div class="product-how-to__col-01">
-    <img src="{{section.settings.product-how-to-image | img_url: 'master'}}" alt="woman using East 29th vital serum"/>
+    <img 
+    data-src="{{section.settings.product-how-to-image | img_url: 'master'}}" 
+    class="lazy lazy-reveal"
+    alt="{{product-how-to-image.alt | escape}}"/>
   </div>
   <div class="product-how-to__col-02">
     <div class="col-02--inner-wrapper">

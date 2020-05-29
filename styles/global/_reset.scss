@@ -89,18 +89,6 @@ select {
 
 // Custom Reset Styles
 
-button {
-  border: none;
-  background-color: transparent;
-  padding: 0;
-  &:focus {
-    outline: none;
-  }
-  &:hover {
-    cursor: pointer;
-  }
-}
-
 // Link Color Reset
 
 a {

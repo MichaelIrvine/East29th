@@ -7,11 +7,24 @@
   margin-top: 5rem;
 
   .footer-row-01 {
-    // height: 80vh;
+    padding: 3.5rem 0;
 
     @media (max-width: $tablet) {
       display: none;
       margin-top: 0;
+    }
+
+    .instafeed--title-wrapper {
+      padding-left: 3.5rem;
+
+      h3 {
+        color: $e29yellow;
+        text-transform: uppercase;
+      }
+    }
+
+    .instafeed--wrapper {
+      padding: 0 2.5rem;
     }
   }
   .footer-row-02 {
@@ -87,6 +100,10 @@
 
         .newsletter--form {
           margin-top: 2rem;
+
+          .note {
+            color: $white;
+          }
 
           .input-group {
             display: flex;

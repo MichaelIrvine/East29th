@@ -19,17 +19,23 @@
     }
 
     .hero-wrapper__col-01 {
+      position: relative;
       width: 50%;
       height: 100%;
       overflow: hidden;
 
       @media (max-width: $tablet) {
         width: 100%;
-        height: auto;
+        height: 100vh;
       }
 
       #ProductPhotoImg {
         width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
       }
     }
     .hero-wrapper__col-02 {

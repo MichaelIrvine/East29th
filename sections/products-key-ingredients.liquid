@@ -23,7 +23,10 @@
     </div>
   </div>
   <div class="key-ingredients__col-02">
-    <img src="{{section.settings.key-ingredients-image | img_url: 'master'}}" alt="{{section.settings.key-ingredients-image.alt | escape }}">
+    <img 
+    data-src="{{section.settings.key-ingredients-image | img_url: 'master'}}" 
+    class="lazy lazy-reveal"
+    alt="{{section.settings.key-ingredients-image.alt | escape }}">
   </div>
   <div class="full-ingredients--wrapper ingredients-drawer">
     <div class="full-ingredients--inner-wrapper">
