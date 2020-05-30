@@ -127,9 +127,10 @@ exports.default = void 0;
 
 var fixedHeader = function fixedHeader() {
   var header = document.querySelector('.header__main');
+  var scrollLogo = document.querySelector('#east29-logo__fixed');
 
   function fixed() {
-    if (window.scrollY >= 1) {
+    if (window.scrollY >= 5) {
       document.body.classList.add('fixed-header');
     } else {
       document.body.classList.remove('fixed-header');
@@ -425,7 +426,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57449" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50665" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

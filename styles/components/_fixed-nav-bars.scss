@@ -5,14 +5,16 @@
   height: 60px;
   max-height: 60px;
   background-color: $white !important;
+  border-bottom: 1px solid $grey;
 }
 
+// Logos
 .fixed-header #east29-logo {
-  display: none;
+  display: none !important;
 }
-
 .fixed-header #east29-logo__fixed {
   display: inline-block !important;
+  opacity: 1 !important;
 }
 
 .fixed-header #cart-icon {

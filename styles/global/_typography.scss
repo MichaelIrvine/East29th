@@ -28,13 +28,13 @@ html {
   font-size: 16px;
   font-family: 'Helvetica', 'Arial', sans-serif;
 
-  @media screen and (max-width: 1440px) {
-    font-size: 14px;
-  }
+  // @media screen and (max-width: 1440px) {
+  //   font-size: 14px;
+  // }
 
-  @media screen and (max-width: $mobileMed) {
-    font-size: 14px;
-  }
+  // @media screen and (max-width: $mobileMed) {
+  //   font-size: 14px;
+  // }
 }
 
 h1 {
@@ -52,7 +52,8 @@ h1 {
 }
 
 h2 {
-  font-size: 2.25rem;
+  // font-size: 2.25rem;
+  font-size: 26px;
   font-family: $font__main--med, Arial, Helvetica, sans-serif;
   color: $font__yellow;
   letter-spacing: 1.25px;
@@ -66,7 +67,8 @@ h2 {
 }
 
 h3 {
-  font-size: 1.4rem;
+  // font-size: 1.4rem;
+  font-size: 18px;
   font-family: $font__main--reg, Arial, Helvetica, sans-serif;
   color: $e29green;
   letter-spacing: 1px;
@@ -78,11 +80,12 @@ h3 {
 }
 
 p {
-  font-size: 1rem;
+  // font-size: 1rem;
+  font-size: 12px;
   font-family: $font__main--reg, Arial, Helvetica, sans-serif;
   color: $e29green;
   letter-spacing: 1px;
-  line-height: 1.5;
+  line-height: 1.7;
 }
 
 span {
@@ -97,7 +100,7 @@ span.no-caps {
 }
 
 a {
-  font-size: 0.875rem;
+  font-size: 12px;
   letter-spacing: 1px;
   line-height: 1.1;
   text-decoration: none;

@@ -30,12 +30,8 @@
       }
 
       #ProductPhotoImg {
-        width: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
+        height: 100%;
+        object-fit: cover;
       }
     }
     .hero-wrapper__col-02 {
@@ -230,6 +226,8 @@
         }
 
         .expand-full-ingredients {
+          color: $e29green;
+
           svg {
             margin-left: 0.5rem;
           }

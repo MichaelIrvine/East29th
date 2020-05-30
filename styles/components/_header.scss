@@ -7,9 +7,9 @@
   right: 0;
   z-index: 999;
   padding: 0 3.5rem;
-
   display: flex;
   justify-content: space-around;
+  transition: background-color 300ms ease-in-out;
 
   @media (max-width: $mobileLarge) {
     height: 60px;
@@ -19,9 +19,13 @@
   .header__logo--wrapper {
     cursor: pointer;
     display: flex;
+    position: relative;
 
     a {
       display: flex;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
     }
 
     svg#east29-logo {
@@ -38,9 +42,10 @@
     }
 
     svg#east29-logo__fixed {
-      width: 80px;
-      max-width: 80px;
-      display: none;
+      width: 55px;
+      max-width: 55px;
+      opacity: 0;
+      transition: opacity 300ms ease-in-out;
 
       @media (max-width: $mobileLarge) {
         display: block;

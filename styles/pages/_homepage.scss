@@ -37,7 +37,7 @@
   .hero-homepage__col-01 {
     position: relative;
     width: 55%;
-    // height: 100%;
+    height: 100%;
     overflow: hidden;
 
     @media (max-width: 890px) {
@@ -48,6 +48,11 @@
       width: 100%;
       height: auto;
       overflow: visible;
+    }
+
+    img {
+      height: 100%;
+      object-fit: cover;
     }
 
     .arrow-down {
@@ -66,7 +71,8 @@
   .hero-homepage__col-02 {
     width: 45%;
     height: 100%;
-    padding: 4rem 2rem;
+    padding: 4rem;
+    padding-right: 2rem;
     background-color: $e29green;
     display: flex;
     flex-direction: column;
@@ -92,7 +98,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 75vh;
+  padding: 8.75rem 0;
 
   @media (max-width: $tablet) {
     height: auto;
@@ -145,8 +151,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 3.5rem;
-  margin-bottom: 5rem;
+  padding: 0 3.5rem;
+  margin-bottom: 8.75rem;
 
   @media (max-width: $tablet) {
     flex-direction: column;
@@ -223,11 +229,6 @@
         max-width: 550px;
       }
 
-      // @media (max-width: $tablet) {
-      //   width: 100%;
-      //   max-width: 415px;
-      // }
-
       @media (max-width: $mobileMed) {
         width: 250px;
       }
@@ -303,10 +304,11 @@
 
 .homepage-feature-product__row-02 {
   flex-direction: row-reverse;
-  margin-bottom: 5rem;
+  margin-bottom: 8.75rem;
 
   @media (max-width: $tablet) {
     flex-direction: column;
+    margin-bottom: 0;
   }
 
   .homepage-feature-product__col-02 {
@@ -327,17 +329,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 8rem;
-  height: 500px;
+  background-color: $e29green;
+  margin-bottom: 8.75rem;
+  height: auto;
 
   @media (max-width: $tablet) {
     flex-direction: column;
-    height: auto;
   }
 
   .homepage-about-us__col-01 {
     width: 50%;
-    height: 500px;
     overflow: hidden;
 
     @media (max-width: $tablet) {
@@ -349,8 +350,6 @@
     }
 
     img {
-      max-width: fit-content;
-
       @media (max-width: $tablet) {
         width: 100%;
         max-width: 100%;
@@ -360,8 +359,6 @@
 
   .homepage-about-us__col-02 {
     width: 50%;
-    height: 500px;
-    background-color: $e29green;
     display: flex;
     justify-content: center;
 
@@ -402,7 +399,7 @@
   height: 100vh;
   display: flex;
   justify-content: center;
-  margin-bottom: 8rem;
+  margin-bottom: 8.75rem;
 
   @media (max-width: $tablet) {
     flex-direction: column;
