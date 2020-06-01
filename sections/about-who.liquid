@@ -15,19 +15,25 @@
     <div class="who-we-are__row-02__col-01">
       <div class="first-block--inner-wrapper">
         <img 
-        data-src="{{section.settings.who-we-are-first-image | img_url: '720x'}}" 
-        class="lazy lazy-reveal"
+        src="{{section.settings.who-we-are-first-image | img_url: '720x'}}" 
+        
         alt="{{who-we-are-first-image.alt | escape}}">
-        <p>{{section.settings.who-we-are-first-image-text}}</p>
+        <div class="who-we-are__text-wrapper">
+          <p class="who-we-are__section-title">{{section.settings.who-we-are-first-image-title}}</p>
+          <p>{{section.settings.who-we-are-first-image-text}}</p>
+        </div>
       </div>
     </div>
     <div class="who-we-are__row-02__col-02">
       <div class="second-block--inner-wrapper">
         <img 
-        data-src="{{section.settings.who-we-are-second-image | img_url: '720x'}}" 
-        class="lazy lazy-reveal"
+        src="{{section.settings.who-we-are-second-image | img_url: '720x'}}" 
+        
         alt="{{who-we-are-second-image.alt | escape}}">
-        <p>{{section.settings.who-we-are-second-image-text}}</p>
+        <div class="who-we-are__text-wrapper">
+          <p class="who-we-are__section-title">{{section.settings.who-we-are-second-image-title}}</p>
+          <p>{{section.settings.who-we-are-second-image-text}}</p>
+        </div>
       </div>
     </div>
   </div>
@@ -35,10 +41,13 @@
     <div class="who-we-are__row-01__col-01">
       <div class="third-block--inner-wrapper">
         <img 
-        data-src="{{section.settings.who-we-are-third-image | img_url: '720x'}}" 
-        class="lazy lazy-reveal"
+        src="{{section.settings.who-we-are-third-image | img_url: '720x'}}" 
+        
         alt="{{who-we-are-third-image.alt | escape}}">
-        <p>{{section.settings.who-we-are-third-image-text}}</p>
+        <div class="who-we-are__text-wrapper">
+          <p class="who-we-are__section-title">{{section.settings.who-we-are-third-image-title}}</p>
+          <p>{{section.settings.who-we-are-third-image-text}}</p>
+        </div>
       </div>
     </div>
   </div>
@@ -71,9 +80,14 @@
         "label": "Who We Are First Image"
       },
       {
+        "id": "who-we-are-first-image-title",
+        "type": "textarea",
+        "label": "Who We Are - First Section Title"
+      },
+      {
         "id": "who-we-are-first-image-text",
         "type": "textarea",
-        "label": "Who We Are Image Description"
+        "label": "Who We Are - First Section Description"
       },
       {
         "id": "who-we-are-second-image",
@@ -81,9 +95,14 @@
         "label": "Who We Are Second Image"
       },
       {
+        "id": "who-we-are-second-image-title",
+        "type": "textarea",
+        "label": "Who We Are - Second Section Title"
+      },
+      {
         "id": "who-we-are-second-image-text",
         "type": "textarea",
-        "label": "Who We Are Image Description"
+        "label": "Who We Are - Second Section Description"
       },
       {
         "id": "who-we-are-third-image",
@@ -91,9 +110,14 @@
         "label": "Who We Are Third Image"
       },
       {
+        "id": "who-we-are-third-image-title",
+        "type": "textarea",
+        "label": "Who We Are - Third Section Description"
+      },
+      {
         "id": "who-we-are-third-image-text",
         "type": "textarea",
-        "label": "Who We Are Image Description"
+        "label": "Who We Are - Third Section Description"
       }
     ]
   }

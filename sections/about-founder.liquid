@@ -1,17 +1,22 @@
-<div id="our-founder" class="founder--wrapper">
-  <div class="founder__block">
-    <div class="founder__col-01">
-      <img 
-      data-src="{{section.settings.founder-image | img_url: 'master'}}" 
-      class="lazy lazy-reveal"
-      alt="{{ founder-image.alt | escape}}">
-    </div>
-    <div class="founder__col-02">
+<div id="our-founder" class="anchor"></div>
+<div class="founder--wrapper">
+  <div class="founder--row-01">
+    <div class="founder__row-01__col-01">
       <h2>{{ section.settings.founder-title }}</h2>
-      <p>{{ section.settings.founder-text }}</p>
+    </div>
+    <div class="founder__row-01__col-02">
+      <div class="founder__row-01__col-02--inner-wrapper">
+        <h3>{{ section.settings.founder-text-para1 }}</h3>
+        <h3>{{ section.settings.founder-text-para2 }}</h3>
+      </div>
     </div>
   </div>
-</div>
+  <div class="founder--row-02">
+    <img 
+    src="{{section.settings.founder-image | img_url: 'master'}}" 
+    
+    alt="{{founder-image.alt | escape}}">
+  </div>
 
 
 {% schema %} 
@@ -19,19 +24,24 @@
     "name": "Our Founder",
     "settings": [
       {
-        "id": "founder-image",
-        "type": "image_picker",
-        "label": "Founder Image"
-      },
-      {
         "id": "founder-title",
         "type": "textarea",
         "label": "Our Founder Title"
       },
       {
-        "id": "founder-text",
+        "id": "founder-text-para1",
         "type": "textarea",
-        "label": "Our Founder Text"
+        "label": "Our Founder Text First Paragraph"
+      },
+      {
+        "id": "founder-text-para2",
+        "type": "textarea",
+        "label": "Our Founder Text Second Paragraph"
+      },
+      {
+        "id": "founder-image",
+        "type": "image_picker",
+        "label": "founder Image"
       }
     ]
   }

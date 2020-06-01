@@ -13,14 +13,16 @@
   </div>
   <div class="mission--row-02">
     <img 
-    data-src="{{section.settings.mission-image | img_url: 'master'}}" 
-    class="lazy lazy-reveal"
+    src="{{section.settings.mission-image | img_url: 'master'}}" 
+
     alt="{{mission-image.alt | escape}}">
   </div>
   <div class="mission--row-03">
     <h3>{{section.settings.values-text}}</h3>
   </div>
 </div>
+
+
 
 
 {% schema %} 
@@ -30,17 +32,17 @@
       {
         "id": "mission-title",
         "type": "textarea",
-        "label": "Who We Are Title"
+        "label": "Missions & Values Title"
       },
       {
         "id": "mission-text-para1",
         "type": "textarea",
-        "label": "Who We Are Text First Paragraph"
+        "label": "Missions & Values Text First Paragraph"
       },
       {
         "id": "mission-text-para2",
         "type": "textarea",
-        "label": "Who We Are Text Second Paragraph"
+        "label": "Missions & Values Text Second Paragraph"
       },
       {
         "id": "mission-image",

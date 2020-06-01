@@ -32,6 +32,7 @@
 // About page Sub Nav Bar
 .fixed-sub-nav .about-page-nav-bar {
   position: fixed;
+  z-index: 99;
 
   @media (max-width: $mobileLarge) {
     position: relative;
