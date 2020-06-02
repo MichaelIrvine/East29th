@@ -75,9 +75,13 @@
     padding-right: 2rem;
     background-color: $e29green;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
+
+    .hero__col-02--inner-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-start;
+    }
 
     @media (max-width: 890px) {
       width: 40%;

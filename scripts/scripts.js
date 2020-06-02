@@ -5,6 +5,8 @@ console.log(
 import fixedHeader from './fixedHeader';
 // Header Drawer Functionality
 import drawer from './drawer';
+// Observer for fading in elements
+// import fades from './fades';
 // Product Pages
 import accordion from './accordion';
 import commentSwiper from './comments';
