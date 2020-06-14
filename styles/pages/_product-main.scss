@@ -29,10 +29,7 @@
         height: 100vh;
       }
 
-      #ProductPhotoImg {
-        height: 100%;
-        object-fit: cover;
-      }
+      // Product Image Slider
     }
     .hero-wrapper__col-02 {
       width: 50%;
@@ -126,6 +123,10 @@
     height: 100px;
     display: flex;
     background-color: $e29green;
+
+    @media (max-width: $mobileLarge) {
+      height: auto;
+    }
 
     ul {
       width: 100%;

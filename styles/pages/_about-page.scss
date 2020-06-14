@@ -22,7 +22,7 @@
 
     .hero-about__col-01 {
       position: relative;
-      width: 30%;
+      width: 50%;
       height: 100%;
       display: flex;
       justify-content: center;
@@ -36,16 +36,6 @@
 
       @media (max-width: $mobileLarge) {
         padding: 10rem 1.5rem 6rem;
-      }
-
-      h1 {
-        width: 60%;
-        white-space: nowrap;
-        margin-left: 6rem;
-
-        @media (max-width: $tablet) {
-          margin-left: 0;
-        }
       }
 
       .arrow-down {
@@ -68,36 +58,23 @@
     }
 
     .hero-about__col-02 {
-      height: 100%;
-      width: 70%;
       position: relative;
-      display: flex;
-      justify-content: flex-end;
-      align-self: flex-end;
+      width: 50%;
+      height: 100%;
+      overflow: hidden;
 
       @media (max-width: $tablet) {
         width: 100%;
       }
 
       img {
-        height: 90vh;
-        align-self: flex-end;
-        width: auto;
+        height: 100%;
+        object-fit: cover;
+        object-position: bottom;
 
         @media (max-width: $tablet) {
           height: auto;
         }
-      }
-
-      .background-fill {
-        background-color: $e29yellow;
-        height: 100vh;
-        width: 70%;
-        position: absolute;
-        top: 0;
-        right: 0;
-        z-index: -1;
-        border-left: 10rem solid $white;
       }
     }
   }
@@ -125,11 +102,12 @@
 
       @media (max-width: $mobileLarge) {
         flex-direction: column;
+        padding: 0;
       }
 
       li {
         @media (max-width: $mobileLarge) {
-          margin: 1rem;
+          margin: rem;
         }
         a {
           text-transform: uppercase;
@@ -142,26 +120,30 @@
   // About Who We Are Section
 
   .who-we-are--wrapper {
-    margin: 10rem 0;
+    margin-top: $spacer140;
+    margin-bottom: $spacer140;
 
     @media (max-width: $tablet) {
-      margin: 3.5rem 0 0 0;
+      margin-top: $spacer80;
+      margin-bottom: $spacer80;
     }
 
     .who-we-are--row-01 {
       display: flex;
-      margin-bottom: 10rem;
+      width: 80%;
+      margin: 0 auto $spacer140;
 
       @media (max-width: $tablet) {
         flex-direction: column;
-        margin-bottom: 3.5rem;
+        margin-bottom: $spacer50;
+        width: 100%;
       }
 
       .who-we-are__row-01__col-01 {
         width: 50%;
         display: flex;
         align-items: flex-start;
-        justify-content: center;
+        justify-content: flex-start;
 
         @media (max-width: $tablet) {
           width: 100%;
@@ -174,14 +156,14 @@
         }
 
         h2 {
-          margin-top: 0;
+          margin: 0;
         }
       }
 
       .who-we-are__row-01__col-02 {
         width: 50%;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
 
         @media (max-width: $tablet) {
           width: 100%;
@@ -193,7 +175,7 @@
         }
 
         .who-we-are__col-2--inner-wrapper {
-          width: 60%;
+          width: 100%;
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -280,6 +262,10 @@
           margin-bottom: 3.5rem;
         }
 
+        @media (max-width: 680px) {
+          margin-top: $spacer50;
+        }
+
         .second-block--inner-wrapper {
           width: 75%;
 
@@ -347,33 +333,34 @@
       content: '';
       width: 75%;
       height: 1px;
-      margin: 8.75rem auto;
+      margin: $spacer140 auto;
       background-color: $grey;
 
       @media (max-width: $tablet) {
         width: 90%;
-        margin: 3.5rem auto;
+        margin: $spacer50 auto;
       }
     }
 
     .mission--row-01 {
       display: flex;
-      margin-bottom: 8.75rem;
+      width: 80%;
+      margin: 0 auto $spacer140;
 
       @media (max-width: $tablet) {
         flex-direction: column;
         margin-bottom: 0;
+        width: 100%;
       }
 
       .mission__row-01__col-01 {
         width: 50%;
         display: flex;
         align-items: flex-start;
-        justify-content: center;
-        padding: 0 7rem;
+        justify-content: flex-start;
 
         h2 {
-          margin-top: 0;
+          margin: 0;
         }
 
         h3 {
@@ -394,11 +381,10 @@
       .mission__row-01__col-02 {
         width: 50%;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
 
         @media (max-width: $tablet) {
           width: 100%;
-          justify-content: flex-start;
           padding: 0 3.5rem;
         }
 
@@ -407,7 +393,7 @@
         }
 
         .mission__row-01__col-02--inner-wrapper {
-          width: 60%;
+          width: 100%;
           display: flex;
           flex-direction: column;
 
@@ -442,26 +428,27 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 8.75rem 0;
+      padding: $spacer140 0;
 
       @media (max-width: $tablet) {
         height: auto;
-        padding: 3.5rem;
+        padding: $spacer80;
+        padding-bottom: 0;
         width: 80%;
         margin: 0 auto;
       }
 
       @media (max-width: $mobileLarge) {
         width: 100%;
-        padding: 1.5rem;
+        padding: $spacer50;
       }
 
       h3 {
         text-align: center;
         width: 50%;
 
-        @media (max-width: $tablet) {
-          width: 100%;
+        @media (max-width: $mobileLarge) {
+          width: 80%;
         }
 
         &:before {
@@ -474,6 +461,7 @@
 
           @media (max-width: $tablet) {
             width: 55%;
+            margin-top: 0;
           }
         }
 
@@ -487,6 +475,7 @@
 
           @media (max-width: $tablet) {
             width: 55%;
+            margin-bottom: 0;
           }
         }
       }
@@ -500,33 +489,36 @@
       content: '';
       width: 75%;
       height: 1px;
-      margin: 8.75rem auto;
+      margin: $spacer140 auto;
+      margin-top: 0;
       background-color: $grey;
 
       @media (max-width: $tablet) {
         width: 90%;
-        margin: 3.5rem auto;
+        margin: $spacer50 auto;
+        margin-top: 0;
       }
     }
 
     .founder--row-01 {
       display: flex;
-      margin-bottom: 8.75rem;
+      width: 80%;
+      margin: 0 auto $spacer140;
 
       @media (max-width: $tablet) {
         flex-direction: column;
         margin-bottom: 0;
+        width: 100%;
       }
 
       .founder__row-01__col-01 {
         width: 50%;
         display: flex;
         align-items: flex-start;
-        justify-content: center;
-        padding: 0 7rem;
+        justify-content: flex-start;
 
         h2 {
-          margin-top: 0;
+          margin: 0;
         }
 
         h3 {
@@ -547,7 +539,7 @@
       .founder__row-01__col-02 {
         width: 50%;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
 
         @media (max-width: $tablet) {
           width: 100%;
@@ -560,7 +552,7 @@
         }
 
         .founder__row-01__col-02--inner-wrapper {
-          width: 60%;
+          width: 100%;
           display: flex;
           flex-direction: column;
 

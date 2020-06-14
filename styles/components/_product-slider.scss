@@ -1,0 +1,38 @@
+.product-swiper-container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+
+  .swiper-wrapper {
+    margin-top: 0 !important;
+    .swiper-slide {
+      height: 100%;
+      padding: 0;
+
+      .product-image {
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .swiper-button-prev {
+    position: absolute;
+    top: 90%;
+    left: 3.5rem;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .swiper-button-next {
+    position: absolute;
+    top: 90%;
+    left: 8rem;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

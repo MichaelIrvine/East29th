@@ -13,7 +13,7 @@
 
   @media (max-width: $mobileLarge) {
     height: 60px;
-    padding: 1rem 1.5rem 0 1.5rem;
+    padding: 0 1.5rem 0 1.5rem;
   }
 
   .header__logo--wrapper {
@@ -45,10 +45,11 @@
       width: 55px;
       max-width: 55px;
       opacity: 0;
-      transition: opacity 300ms ease-in-out;
+      transition: opacity 150ms ease-in-out;
 
       @media (max-width: $mobileLarge) {
         display: block;
+        opacity: 1;
       }
     }
   }

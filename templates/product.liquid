@@ -3,12 +3,43 @@
     {% assign current_variant = product.selected_or_first_available_variant %}
     {% assign featured_image = current_variant.featured_image | default:
     product.featured_image %}
-    <img
-      data-src="{{ featured_image | img_url: 'master' }}"
-      alt="{{ featured_image.alt | escape }}"
-      id="ProductPhotoImg"
-      class="lazy lazy-reveal"
-    />
+    <div class="product-swiper-container">
+    <div class="swiper-wrapper">
+    {% for image in product.images %}
+        <div class="swiper-slide">
+          <img
+          src="{{ image.src | img_url: 'master' }}"
+          alt="{{ image.alt | escape }}"
+          class="product-image swiper-lazy"
+          />
+        </div>
+    {% endfor %}
+    </div>
+    <div class="swiper-button-prev">
+      <svg id="product-swiper_prev-arrow" width="9.019" height="11.819">
+        <g data-name="product-swiper_prev-arrow">
+          <path
+            d="M8.729.412L.872 5.831l7.857 5.581"
+            fill="none"
+            stroke="black"
+            stroke-miterlimit="10"
+          />
+        </g>
+      </svg>
+    </div>
+    <div class="swiper-button-next">
+      <svg id="product-swiper_next-arrow" width="9.019" height="11.819">
+        <g data-name="product-swiper_next-arrow">
+          <path
+            d="M.29.412l7.857 5.419L.29 11.412"
+            fill="none"
+            stroke="black"
+            stroke-miterlimit="10"
+          />
+        </g>
+      </svg>
+    </div>
+    </div>
   </div>
   <div class="hero-wrapper__col-02">
     <div class="col-02--inner-wrapper">

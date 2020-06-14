@@ -1,26 +1,38 @@
 <div class="homepage-product-cta will-fade-in">
   <div class="homepage-product-cta__col-01">
-    <h2>The Vital Serum</h2>
+    <h2>{{section.settings.vital-cta-title}}</h2>
     <p>
-      Torquem detraxit hosti et quidem rerum hic tenetur a philosophis
-      compluribus permulta dicantur. Laudem et argumentandum et inter argumentum
-      conclusionemque rationis et molestiae consequatur, vel illum. Certe,
-      inquam, pertinax non ero tibique, si mihi probabis ea, quae ab illo.
+      {{section.settings.vital-cta-text}}
     </p>
     <a href="/products/vital-serum" class="button-main">Shop Now</a>
   </div>
   <div class="homepage-product-cta__col-02">
-    <div class="circle-text">
-      <img
-        class="rotate"
-        src="{{ 'made-with-lemon_circle.png' | asset_img_url: 'master' }}"
-      />
-    </div>
-    <div class="product-image">
-      <img
-        src="{{ 'Bottle@2x.png' | asset_img_url: 'master' }}"
-        alt="East 29th Vital Serum Bottle"
-      />
-    </div>
+    <img 
+    data-src="{{section.settings.vital-cta-image | img_url: 'master'}}" 
+    class="lazy lazy-reveal"
+    alt="{{vital-cta-image.alt | escape}}"/>
   </div>
 </div>
+
+{% schema %} 
+  {
+    "name": "Vital Serum CTA",
+    "settings": [
+      {
+        "id": "vital-cta-title",
+        "type": "text",
+        "label": "CTA Title"
+      }, 
+      {
+        "id": "vital-cta-text",
+        "type": "textarea",
+        "label": "CTA Text"
+      },
+      {
+        "id": "vital-cta-image",
+        "type": "image_picker",
+        "label": "CTA Image"
+      }
+    ]
+  }
+{% endschema %}

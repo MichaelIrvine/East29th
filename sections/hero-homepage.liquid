@@ -3,7 +3,7 @@
         <img
           data-src="{{ section.settings.hero-homepage-image | img_url: '1080x' }}"
           alt="{{ hero-homepage-image.alt | escape }}"
-          class="lazy lazy-reveal"
+          class="lazy lazy-reveal delay-1"
         /> 
     <div class="arrow-down">
       <svg xmlns="http://www.w3.org/2000/svg" width="24.413" height="98.707">
@@ -25,7 +25,7 @@
   </div>
   <div class="hero-homepage__col-02">
     <div class="hero__col-02--inner-wrapper will-fade-up-in delay-2">
-      <h1>Natural Confidence:<br />Skincare Beyond Skin</h1>
+      <h1>{{section.settings.hero-homepage-heading}}</h1>
       <a href="/products/vital-serum" class="button-main">Discover</a>
     </div>
   </div>
@@ -39,6 +39,11 @@
         "id": "hero-homepage-image",
         "type": "image_picker",
         "label": "Homepage Hero Image"
+      }, 
+      {
+        "id": "hero-homepage-heading",
+        "type": "textarea",
+        "label": "Homepage Heading"
       }
     ]
   }

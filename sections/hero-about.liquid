@@ -14,8 +14,11 @@
     </div>
   </div>
   <div class="hero-about__col-02">
-    <img src="{{section.settings.hero-about-image | img_url: 'master'}}" alt=""/>
-    <div class="background-fill"></div>
+    <img
+          data-src="{{section.settings.hero-about-image | img_url: 'master'}}"
+          alt="{{ hero-about-image.alt | escape }}"
+          class="lazy lazy-reveal delay-1"
+        /> 
   </div>
 </div>
 

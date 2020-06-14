@@ -14,11 +14,13 @@ import ingredientDrawer from './ingredientDrawer';
 // About Page
 import fixedSubNav from './fixedSubNav';
 import anchorLinks from './anchorLinks';
+import productSwiper from './productSlider';
 
 if (window.location.pathname === '/products/vital-serum') {
   accordion();
   commentSwiper();
   ingredientDrawer();
+  productSwiper();
 }
 
 if (window.location.pathname === '/pages/about') {
