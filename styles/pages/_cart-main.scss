@@ -71,14 +71,20 @@
         .cart-contents__product-title {
           text-transform: uppercase;
           margin-right: 1rem;
+          margin-bottom: 0;
 
           @media (max-width: 600px) {
             margin-bottom: 0;
           }
         }
 
+        .cart-contents__product-type {
+          font-family: $font__main--reg;
+        }
+
         #removeItems {
           margin: 1rem 0;
+          font-family: $font__main--reg;
         }
       }
     }

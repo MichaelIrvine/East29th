@@ -63,7 +63,8 @@
         </select>
         <div class="product-add-to-cart--wrapper">
           <div class="product-price">
-            <p>{{ current_variant.price | money }} + Shipping</p>
+            <p>{{ current_variant.price | money }} + Tax</p>
+            <p>- Shipping & Curbside Pickup</p>
           </div>
           <div class="product-controls">
             <div class="quantity--wrapper">
@@ -137,6 +138,7 @@
     <li class="feature-bar-list-item">Cruelty Free</li>
     <li class="feature-bar-list-item">Paraben Free</li>
     <li class="feature-bar-list-item">Non-GMO</li>
+    <li class="feature-bar-list-item">Vegan</li>
   </ul>
 </div>
 {% section 'products-key-ingredients' %} {% section 'products-how-to-use' %} {%

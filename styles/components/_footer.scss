@@ -106,7 +106,7 @@
         }
         p {
           color: $white;
-          width: 80%;
+          margin: 2.5rem 0;
         }
 
         .errors {
@@ -118,8 +118,6 @@
         }
 
         .newsletter--form {
-          margin-top: 2rem;
-
           .note {
             color: $white;
           }

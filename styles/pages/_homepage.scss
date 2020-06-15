@@ -393,13 +393,12 @@
   height: 100vh;
   display: flex;
   justify-content: center;
-  margin-bottom: $spacer140;
+  margin-bottom: 0;
 
   @media (max-width: $tablet) {
     flex-direction: column;
     flex-flow: column-reverse;
     align-items: flex-end;
-    margin-bottom: 0;
   }
 
   .homepage-feature-product-02__col-01 {
@@ -440,9 +439,9 @@
     }
 
     img {
-      position: absolute;
-      top: 0;
-      right: 0;
+      height: 100%;
+      object-fit: cover;
+      object-position: bottom;
 
       @media (max-width: $tablet) {
         position: relative;
