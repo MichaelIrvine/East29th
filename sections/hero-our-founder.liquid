@@ -1,0 +1,42 @@
+<div id="hero-our-founder" class="hero-our-founder">
+  <div class="hero-our-founder__col-01">
+    <h1 class="will-fade-up-in">{{section.settings.hero-our-founder-title}}</h1>
+    <div class="arrow-down">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24.413" height="98.707">
+        <g data-name="ARROW DOWN" fill="none" stroke="#fff" stroke-linecap="square" stroke-miterlimit="10">
+          <path data-name="Line 7" d="M12.207 1.3v96.04"/>
+          <g data-name="Group 49">
+            <path data-name="Line 8" d="M12.207 98L.707 85.65"/>
+            <path data-name="Line 9" d="M12.207 98l11.5-12.35"/>
+          </g>
+        </g>
+      </svg>
+    </div>
+  </div>
+  <div class="hero-our-founder__col-02">
+    <img
+          data-src="{{section.settings.hero-our-founder-image | img_url: 'master'}}"
+          alt="{{ hero-our-founder-image.alt | escape }}"
+          class="lazy lazy-reveal delay-1"
+        /> 
+  </div>
+</div>
+
+
+{% schema %} 
+  {
+    "name": "Our Founder Hero",
+    "settings": [
+      {
+        "id": "hero-our-founder-image",
+        "type": "image_picker",
+        "label": "Our Founder Page - Hero Image"
+      },
+      {
+        "id": "hero-our-founder-title",
+        "type": "textarea",
+        "label": "Our Founder Page - Hero Title"
+      }
+    ]
+  }
+{% endschema %}

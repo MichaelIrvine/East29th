@@ -5,8 +5,6 @@ console.log(
 import fixedHeader from './fixedHeader';
 // Header Drawer Functionality
 import drawer from './drawer';
-// Observer for fading in elements
-// import fades from './fades';
 // Product Pages
 import accordion from './accordion';
 import commentSwiper from './comments';
@@ -26,6 +24,10 @@ if (window.location.pathname === '/products/vital-serum') {
 if (window.location.pathname === '/pages/about') {
   fixedSubNav();
   anchorLinks();
+}
+
+if (window.location.pathname === '/pages/our-founder') {
+  accordion();
 }
 
 fixedHeader();

@@ -1,0 +1,33 @@
+<section id="our-founder-intro" class="our-founder-intro--wrapper">
+  <div class="our-founder-intro--inner-wrapper">
+    <div class="our-founder__col-01">
+      <div class="our-founder__intro-title">
+        <h3>{{section.settings.our-founder-intro-title}}</h3>
+      </div>
+    </div>
+    <div class="our-founder__col-02">
+      <div class="our-founder__intro-para">
+        <h3>{{section.settings.our-founder-intro-paragraph}}</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{% schema %} 
+  {
+    "name": "Our Founder Intro",
+    "settings": [
+      {
+        "id": "our-founder-intro-title",
+        "type": "text",
+        "label": "Our Founder Page - Intro Title"
+      },
+      {
+        "id": "our-founder-intro-paragraph",
+        "type": "textarea",
+        "label": "Our Founder Page - Hero Paragraph"
+      }
+    ]
+  }
+{% endschema %}

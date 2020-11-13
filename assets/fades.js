@@ -1,5 +1,3 @@
-// Add Fade Up In -- Maybe unnecessary
-// Try to use with Parcel / import
 document.addEventListener('DOMContentLoaded', function () {
   let elementsToFadeIn;
   let options = {

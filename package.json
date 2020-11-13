@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch": "concurrently \"theme watch\" \"parcel watch scripts/scripts.js --out-dir assets --out-file scripts.js\"",
-    "build": "parcel build scripts/scripts.js --out-dir assets --out-file scripts.js"
+    "dev": "concurrently \"theme watch --env=development --allow-live\" \"parcel watch scripts/scripts.js --out-dir assets --out-file scripts.js\"",
+    "watch": "concurrently \"theme watch --env=production --allow-live\" \"parcel watch scripts/scripts.js --out-dir assets --out-file scripts.js\""
   },
   "repository": {
     "type": "git",

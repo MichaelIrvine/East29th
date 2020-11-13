@@ -1,0 +1,60 @@
+{% comment %} Our Founder Page - Section 2 {% endcomment %}
+<section class="image-is-right-aligned">
+  {% comment %} Column 1 with Q/A {% endcomment %}
+  <div class="our-founder_section__col-01">
+    <div class="col-01--inner-wrapper">
+      {% comment %} Questions / Answers start here {% endcomment %}
+      <div class="our-founder_q-a--wrapper">
+        {% for block in section.blocks %}
+          <button class="toggle-answer accordion__button">
+            <h3>{{block.settings.question}}</h3>
+          </button>
+          
+          <div class="answer accordion__content">
+            <p>{{block.settings.answer}}</p>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  {% comment %} Colum 2 with Image {% endcomment %}
+  <div class="our-founder_section__col-02">
+    <div class="col-02--inner-wrapper">
+      <img 
+      data-src="{{section.settings.our-founder-qa-section-2-image | img_url: 'master'}}" 
+      class="lazy lazy-reveal"
+      alt="{{section.settings.our-founder-qa-section-2-image.alt | escape }}">
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Our Founder section 2",
+    "settings": [
+      {
+        "id": "our-founder-qa-section-2-image",
+        "type": "image_picker",
+        "label": "Our Founder Q/A Section 2 Image"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "text",
+        "name": "Questions & Answers",
+        "settings": [
+          {
+            "id": "question",
+            "type": "text",
+            "label": "Enter Question"
+          },
+          {
+            "id": "answer",
+            "type": "textarea",
+            "label": "Enter Answer"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

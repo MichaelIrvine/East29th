@@ -1,0 +1,22 @@
+
+<section class="our-founder-outro--wrapper">
+  <div class="our-founder-outro-image">
+    <img 
+    src="{{section.settings.our-founder-outro-image | img_url: 'master'}}" 
+    
+    alt="{{our-founder-outro-image.alt | escape}}">
+  </div>
+</section>
+
+{% schema %} 
+  {
+    "name": "Our Founder Outro Image",
+    "settings": [
+      {
+        "id": "our-founder-outro-image",
+        "type": "image_picker",
+        "label": "Our Founder Outro Image"
+      }
+    ]
+  }
+{% endschema %}
