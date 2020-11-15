@@ -29,6 +29,9 @@ if (window.location.pathname === '/pages/about') {
 if (window.location.pathname === '/pages/our-founder') {
   accordion();
 }
+if (window.location.pathname === '/pages/clean-beauty') {
+  accordion();
+}
 
 fixedHeader();
 drawer();

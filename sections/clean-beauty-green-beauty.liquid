@@ -1,10 +1,10 @@
-{% comment %} Our Founder Page - Section 4 {% endcomment %}
-<section class="image-is-right-aligned">
+{% comment %} Clean Beauty Page - Section Green Beauty {% endcomment %}
+<section class="clean-green-beauty image-is-right-aligned">
   {% comment %} Column 1 with Q/A {% endcomment %}
-  <div class="our-founder_section__col-01">
+  <div class="green-beauty_section__col-01">
     <div class="col-01--inner-wrapper">
-      {% comment %} Questions / Answers start here {% endcomment %}
-      <div class="our-founder_q-a--wrapper">
+      <h2>{{section.settings.green-beauty-title}}</h2>
+      <div class="green-beauty_q-a--wrapper">
         {% for block in section.blocks %}
           <button class="toggle-answer accordion__button">
             <h3>{{block.settings.question}}</h3>
@@ -18,24 +18,30 @@
     </div>
   </div>
   {% comment %} Colum 2 with Image {% endcomment %}
-  <div class="our-founder_section__col-02">
+  <div class="green-beauty_section__col-02">
     <div class="col-02--inner-wrapper lazy-image-wrapper">
       <img 
-      data-src="{{section.settings.our-founder-qa-section-4-image | img_url: 'master'}}" 
+      data-aspect="portrait"
+      data-src="{{section.settings.green-beauty-image | img_url: 'master'}}" 
       class="lazy lazy-reveal"
-      alt="{{section.settings.our-founder-qa-section-4-image.alt | escape }}">
+      alt="{{section.settings.green-beauty-image.alt | escape }}">
     </div>
   </div>
 </section>
 
 {% schema %}
   {
-    "name": "Our Founder section 4",
+    "name": "Green Beauty Section",
     "settings": [
       {
-        "id": "our-founder-qa-section-4-image",
+        "id": "green-beauty-image",
         "type": "image_picker",
-        "label": "Our Founder Q/A Section 4 Image"
+        "label": "Green Beauty Image"
+      },
+      {
+        "id": "green-beauty-title",
+        "type": "text",
+        "label": "Green Beauty Title"
       }
     ],
     "blocks": [

@@ -1,9 +1,16 @@
 .lazy-reveal {
   transition: opacity 750ms ease-in;
   opacity: 1;
-  min-height: 100px;
 }
 
 .lazy {
   opacity: 0;
+}
+
+// Account for lazy loading images page reflow
+.lazy-image-wrapper {
+  min-height: 100vh;
+  @media (max-width: 768px) {
+    min-height: 50vh;
+  }
 }

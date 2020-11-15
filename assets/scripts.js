@@ -433,6 +433,10 @@ if (window.location.pathname === '/pages/our-founder') {
   (0, _accordion.default)();
 }
 
+if (window.location.pathname === '/pages/clean-beauty') {
+  (0, _accordion.default)();
+}
+
 (0, _fixedHeader.default)();
 (0, _drawer.default)();
 },{"./fixedHeader":"fixedHeader.js","./drawer":"drawer.js","./accordion":"accordion.js","./comments":"comments.js","./ingredientDrawer":"ingredientDrawer.js","./fixedSubNav":"fixedSubNav.js","./anchorLinks":"anchorLinks.js","./productSlider":"productSlider.js"}],"../../../../../../../../../.nvm/versions/node/v12.16.1/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -463,7 +467,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65369" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61727" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

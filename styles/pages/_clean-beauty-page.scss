@@ -1,4 +1,4 @@
-.page-our-founder {
+.page-clean-beauty {
   h1,
   h2,
   h3,
@@ -6,8 +6,8 @@
     color: $e29green;
   }
 
-  // About Hero Section
-  .hero-our-founder {
+  // clean-beauty Hero Section
+  .hero-clean-beauty {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -20,7 +20,7 @@
       height: auto;
     }
 
-    .hero-our-founder__col-01 {
+    .hero-clean-beauty__col-01 {
       position: relative;
       width: 50%;
       height: 100%;
@@ -57,7 +57,7 @@
       }
     }
 
-    .hero-our-founder__col-02 {
+    .hero-clean-beauty__col-02 {
       position: relative;
       width: 50%;
       height: 100%;
@@ -79,74 +79,88 @@
     }
   }
 
-  //Our Founder Intro
-  .our-founder-intro--wrapper {
-    margin-bottom: $spacer140;
-    background-color: $e29green;
+  // clean-beauty Page Navigation
+
+  .clean-beauty-page-nav-bar {
     width: 100%;
-    margin: 0 auto $spacer140;
+    height: 50px;
+    display: flex;
+    background-color: $e29green;
 
-    h2,
-    h3,
-    h4 {
-      color: $e29yellow;
+    @media (max-width: $mobileLarge) {
+      height: auto;
+      padding: 1rem;
     }
 
-    @media (max-width: $tablet) {
-      margin-bottom: 0;
-    }
-
-    .our-founder-intro--inner-wrapper {
+    ul {
+      width: 100%;
+      margin: 0;
       display: flex;
-      width: 80%;
-      margin: 0 auto $spacer140;
-      padding: 8.5rem 0;
+      align-items: center;
+      justify-content: space-around;
+      padding: 1rem;
 
-      @media (max-width: $tablet) {
+      @media (max-width: $mobileLarge) {
         flex-direction: column;
-        margin-bottom: 0;
-        width: 100%;
+        padding: 0;
       }
-      .our-founder__col-01 {
-        width: 50%;
-        display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;
 
-        @media (max-width: $tablet) {
-          width: 100%;
-          justify-content: flex-start;
-          padding: 0 3.5rem;
-          margin-bottom: $spacer50;
-        }
-
+      li {
         @media (max-width: $mobileLarge) {
-          padding: 0 1.5rem;
+          margin: rem;
         }
-      }
-      .our-founder__col-02 {
-        width: 50%;
-        display: flex;
-        justify-content: flex-start;
-
-        @media (max-width: $tablet) {
-          width: 100%;
-          padding: 0 3.5rem;
-        }
-
-        @media (max-width: $mobileLarge) {
-          padding: 1.5rem;
+        a {
+          text-transform: uppercase;
+          font-family: $font__main--med;
         }
       }
     }
   }
 
-  // Q/A section with left aligned image
-  .image-is-left-aligned {
+  // **
+  // * Clean Beauty - Intro & Movement Section
+  // **
+
+  .clean-beauty-intro--wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: $spacer140 0 0;
+
+    @media (max-width: $tablet) {
+      height: auto;
+      padding: $spacer50 1.5rem;
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    @media (max-width: $mobileLarge) {
+      width: 100%;
+    }
+
+    svg {
+      margin-bottom: $spacer50;
+    }
+
+    h3 {
+      text-align: center;
+      width: 50%;
+
+      @media (max-width: $tablet) {
+        width: 80%;
+      }
+    }
+  }
+
+  // *
+  // ** Clean Movement Accordion Section
+  // *
+  .clean-movement.image-is-left-aligned {
     display: flex;
     position: relative;
     height: 100%;
-    margin-top: 10rem;
+
     align-items: center;
     justify-content: center;
 
@@ -156,7 +170,7 @@
     }
 
     // Left aligned Image
-    .our-founder_section__col-01 {
+    .clean-movement_section__col-01 {
       width: 50%;
       height: 100%;
       display: flex;
@@ -173,8 +187,8 @@
       }
     }
 
-    // Q/A
-    .our-founder_section__col-02 {
+    // Accordion
+    .clean-movement_section__col-02 {
       width: 50%;
       height: 100%;
       display: flex;
@@ -208,7 +222,7 @@
           margin-bottom: 3rem;
         }
 
-        .our-founder_q-a--wrapper {
+        .clean-movement_q-a--wrapper {
           .accordion__button {
             width: 100%;
             padding-bottom: 0.25rem;
@@ -239,12 +253,14 @@
     }
   }
 
-  // Q/A section with left aligned image
-  .image-is-right-aligned {
+  // * Green Movement Accordion Section
+  // *
+
+  .clean-green-beauty.image-is-right-aligned {
     display: flex;
     position: relative;
     height: 100%;
-    margin-top: 10rem;
+
     align-items: center;
     justify-content: center;
 
@@ -254,7 +270,7 @@
     }
 
     // Q/A
-    .our-founder_section__col-01 {
+    .green-beauty_section__col-01 {
       width: 50%;
       height: 100%;
       display: flex;
@@ -288,7 +304,7 @@
           margin-bottom: 3rem;
         }
 
-        .our-founder_q-a--wrapper {
+        .green-beauty_q-a--wrapper {
           .accordion__button {
             width: 100%;
             padding-bottom: 0.25rem;
@@ -319,7 +335,7 @@
     }
 
     // Right Aligned Image
-    .our-founder_section__col-02 {
+    .green-beauty_section__col-02 {
       width: 50%;
       height: 100%;
       display: flex;
@@ -337,21 +353,188 @@
     }
   }
 
-  // Outro Image
-  .our-founder-outro--wrapper {
-    margin-top: $spacer140;
-    padding: 3.5rem 4rem 0 4rem;
+  // **
+  // * Clean Vegan Section
+  // **
+  .clean-vegan--wrapper {
+    // Image
+    .clean-vegan--row-1 {
+      margin-top: $spacer140;
+      margin-bottom: $spacer140;
 
-    @media (max-width: $tablet) {
-      padding: 3.5rem;
+      @media (max-width: 820px) {
+        margin-top: $spacer80;
+        margin-bottom: $spacer80;
+      }
+      .row-1--wrapper {
+        padding: 3.5rem 4rem 0 4rem;
+
+        @media (max-width: $tablet) {
+          padding: 3.5rem;
+        }
+
+        @media (max-width: $mobileLarge) {
+          padding: 0 1.5rem;
+        }
+
+        img {
+          width: 100%;
+        }
+      }
     }
+    // Title & Certification
+    .clean-vegan--row-2 {
+      padding: 0 8rem;
+      margin-bottom: $spacer50;
+
+      @media (max-width: 820px) {
+        padding: 0 4rem;
+      }
+
+      .row-2--inner-wrapper {
+        .vegan-certified {
+          display: flex;
+          flex-wrap: nowrap;
+
+          svg {
+            margin-left: 1rem;
+          }
+        }
+      }
+    }
+    // Row 3 - Blocks
+    .clean-vegan--row-3 {
+      padding: 0 8rem;
+
+      @media (max-width: 820px) {
+        padding: 0 4rem;
+      }
+
+      .row-3--wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: start;
+        gap: 4rem;
+
+        @media (max-width: 820px) {
+          grid-template-columns: 1fr;
+        }
+        // Individual block style
+        .clean-vegan-block {
+          .clean-vegan-block-icon {
+            max-width: 60px;
+            margin-bottom: 2rem;
+          }
+          .clean-vegan-block-title {
+            min-height: 75px;
+          }
+          .clean-vegan-block-paragraph {
+          }
+        }
+      }
+    }
+  }
+
+  // **
+  // * Clean Beauty Serums
+  // **
+  .clean-serums.image-is-left-aligned {
+    display: flex;
+    position: relative;
+    height: 100%;
+
+    @media (max-width: 820px) {
+      flex-direction: column;
+      margin-top: 0;
+    }
+
+    // Left aligned Image
+    .clean-serums_section__col-01 {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @media (max-width: 820px) {
+        width: 100%;
+        padding: 0 3.5rem;
+      }
+
+      @media (max-width: $mobileLarge) {
+        padding: 0 1.5rem;
+      }
+
+      img {
+        max-height: 900px;
+        object-fit: cover;
+      }
+    }
+
+    .clean-serums_section__col-02 {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2.5rem 4rem;
+
+      @media (min-width: $desktopXL) {
+        padding: 2.5rem 8rem;
+      }
+
+      @media (max-width: $desktopSmall) {
+        padding: 6.5rem 3.5rem;
+      }
+
+      @media (max-width: 820px) {
+        width: 100%;
+      }
+
+      @media (max-width: $mobileLarge) {
+        padding: 3.5rem 1.5rem;
+      }
+
+      .col-02--inner-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+// This might need to be removed
+.anchor {
+  display: block;
+  position: relative;
+  top: -250px;
+  visibility: hidden;
+}
+
+.anchor-link:hover {
+  color: $e29yellow;
+  text-decoration: underline;
+}
+
+.anchor-link.active {
+  color: $e29yellow;
+  text-decoration: underline;
+
+  @media (max-width: $mobileLarge) {
+    color: $white;
+    text-decoration: none;
+  }
+}
+
+// Class to account for the page flow shift for sticky sub nav
+.flow-adjuster {
+  &.bumped {
+    height: 50px;
 
     @media (max-width: $mobileLarge) {
-      padding: 0 1.5rem;
-    }
-
-    img {
-      width: 100%;
+      height: 0;
     }
   }
 }

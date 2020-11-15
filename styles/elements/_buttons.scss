@@ -74,3 +74,8 @@ a.button-main {
     // padding: 1.5rem;
   }
 }
+
+// Accordion Buttons
+.accordion__button::after {
+  margin-left: 2rem;
+}

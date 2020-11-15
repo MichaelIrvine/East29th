@@ -1,0 +1,45 @@
+{% comment %} Clean Beauty Serums & Oils - Section 1 {% endcomment %}
+<section class="clean-serums image-is-left-aligned">
+  <div class="clean-serums_section__col-01">
+    <div class="col-01--inner-wrapper">
+      <img 
+      data-aspect="portrait"
+      data-src="{{section.settings.clean-beauty-serums-image | img_url: 'master'}}" 
+      class="lazy lazy-reveal"
+      alt="{{section.settings.clean-beauty-serums-image.alt | escape }}">
+    </div>
+  </div>
+  <div class="clean-serums_section__col-02">
+    <div class="col-02--inner-wrapper">
+      <h2 class="clean-serums-title">
+        {{section.settings.clean-beauty-serums-title}}
+      </h2>
+      <p class="clean-serums-para">
+        {{section.settings.clean-beauty-serums-paragraph}}
+      </p>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Clean Beauty Serums",
+    "settings": [
+      {
+        "id": "clean-beauty-serums-image",
+        "type": "image_picker",
+        "label": "Clean Beauty serums Image"
+      },
+      {
+        "id": "clean-beauty-serums-title",
+        "type": "text",
+        "label": "Clean Beauty Serums Title"
+      },
+      {
+        "id": "clean-beauty-serums-paragraph",
+        "type": "textarea",
+        "label": "Clean Beauty Serums Paragraph"
+      }
+    ]
+  }
+{% endschema %}

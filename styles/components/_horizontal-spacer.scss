@@ -1,0 +1,15 @@
+.horizontal-spacer {
+  &:before {
+    display: block;
+    content: '';
+    width: 75%;
+    height: 1px;
+    margin: $spacer140 auto;
+    background-color: $grey;
+
+    @media (max-width: $tablet) {
+      width: 90%;
+      margin: $spacer50 auto;
+    }
+  }
+}

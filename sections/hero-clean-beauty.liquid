@@ -1,6 +1,6 @@
-<div id="hero-our-founder" class="hero-our-founder">
-  <div class="hero-our-founder__col-01">
-    <h1 class="will-fade-up-in">{{section.settings.hero-our-founder-title}}</h1>
+<div id="hero-clean-beauty" class="hero-clean-beauty">
+  <div class="hero-clean-beauty__col-01">
+    <h1 class="will-fade-up-in">{{section.settings.hero-clean-beauty-title}}</h1>
     <div class="arrow-down">
       <svg xmlns="http://www.w3.org/2000/svg" width="24.413" height="98.707">
         <g data-name="ARROW DOWN" fill="none" stroke="#fff" stroke-linecap="square" stroke-miterlimit="10">
@@ -13,29 +13,30 @@
       </svg>
     </div>
   </div>
-  <div class="hero-our-founder__col-02 lazy-image-wrapper">
+  <div class="hero-clean-beauty__col-02 lazy-image-wrapper">
     <img
-          data-src="{{section.settings.hero-our-founder-image | img_url: 'master'}}"
-          alt="{{ hero-our-founder-image.alt | escape }}"
-          class="lazy lazy-reveal delay-1"
-        /> 
+    data-aspect="portrait"
+    data-src="{{section.settings.hero-clean-beauty-image | img_url: 'master'}}"
+    alt="{{ hero-clean-beauty-image.alt | escape }}"
+    class="lazy lazy-reveal delay-1"
+    /> 
   </div>
 </div>
 
 
 {% schema %} 
   {
-    "name": "Our Founder Hero",
+    "name": "Clean Beauty Hero",
     "settings": [
       {
-        "id": "hero-our-founder-image",
+        "id": "hero-clean-beauty-image",
         "type": "image_picker",
-        "label": "Our Founder Page - Hero Image"
+        "label": "Clean Beauty Page - Hero Image"
       },
       {
-        "id": "hero-our-founder-title",
+        "id": "hero-clean-beauty-title",
         "type": "textarea",
-        "label": "Our Founder Page - Hero Title"
+        "label": "Clean Beauty Page - Hero Title"
       }
     ]
   }
