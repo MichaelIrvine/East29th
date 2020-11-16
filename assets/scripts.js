@@ -367,6 +367,63 @@ var anchorLinks = function anchorLinks() {
 
 var _default = anchorLinks;
 exports.default = _default;
+},{}],"anchorLinksBeautyPage.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var anchorLinksBeautyPage = function anchorLinksBeautyPage() {
+  function activeLink() {
+    var movementSection = document.querySelector('.clean-movement');
+    var greenSection = document.querySelector('.clean-green-beauty');
+    var veganSection = document.querySelector('.clean-vegan--wrapper');
+    var serumsSection = document.querySelector('.clean-serums');
+    var movementLink = document.getElementById('clean-beauty-link');
+    var greenLink = document.getElementById('green-beauty-link');
+    var veganLink = document.getElementById('vegan-link');
+    var serumsLink = document.getElementById('serums-link');
+    var windowBottom = window.scrollY + window.innerHeight;
+    var movementSectionBottom = movementSection.offsetTop + movementSection.clientHeight;
+    var greenSectionBottom = greenSection.offsetTop + greenSection.clientHeight;
+    var veganSectionBottom = veganSection.offsetTop + veganSection.clientHeight;
+    var serumsSectionBottom = serumsSection.offsetTop + serumsSection.clientHeight; // Clean Movement
+
+    if (windowBottom >= movementSection.offsetTop && windowBottom < movementSectionBottom) {
+      movementLink.classList.add('active');
+    } else {
+      movementLink.classList.remove('active');
+    } // Green Beauty
+
+
+    if (windowBottom >= greenSection.offsetTop && windowBottom < greenSectionBottom) {
+      greenLink.classList.add('active');
+    } else {
+      greenLink.classList.remove('active');
+    } // Vegan
+
+
+    if (windowBottom >= veganSection.offsetTop && windowBottom < veganSectionBottom) {
+      veganLink.classList.add('active');
+    } else {
+      veganLink.classList.remove('active');
+    } // Serums
+
+
+    if (windowBottom >= serumsSection.offsetTop && windowBottom < serumsSectionBottom) {
+      serumsLink.classList.add('active');
+    } else {
+      serumsLink.classList.remove('active');
+    }
+  }
+
+  window.addEventListener('scroll', activeLink);
+};
+
+var _default = anchorLinksBeautyPage;
+exports.default = _default;
 },{}],"productSlider.js":[function(require,module,exports) {
 "use strict";
 
@@ -414,6 +471,8 @@ var _fixedSubNav = _interopRequireDefault(require("./fixedSubNav"));
 
 var _anchorLinks = _interopRequireDefault(require("./anchorLinks"));
 
+var _anchorLinksBeautyPage = _interopRequireDefault(require("./anchorLinksBeautyPage"));
+
 var _productSlider = _interopRequireDefault(require("./productSlider"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -437,12 +496,14 @@ if (window.location.pathname === '/pages/our-founder') {
 }
 
 if (window.location.pathname === '/pages/clean-beauty') {
-  (0, _accordion.default)(); // fixedSubNav();
+  (0, _accordion.default)();
+  (0, _fixedSubNav.default)();
+  (0, _anchorLinksBeautyPage.default)();
 }
 
 (0, _fixedHeader.default)();
 (0, _drawer.default)();
-},{"./fixedHeader":"fixedHeader.js","./drawer":"drawer.js","./accordion":"accordion.js","./comments":"comments.js","./ingredientDrawer":"ingredientDrawer.js","./fixedSubNav":"fixedSubNav.js","./anchorLinks":"anchorLinks.js","./productSlider":"productSlider.js"}],"../../../../../../../../../.nvm/versions/node/v12.16.1/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./fixedHeader":"fixedHeader.js","./drawer":"drawer.js","./accordion":"accordion.js","./comments":"comments.js","./ingredientDrawer":"ingredientDrawer.js","./fixedSubNav":"fixedSubNav.js","./anchorLinks":"anchorLinks.js","./anchorLinksBeautyPage":"anchorLinksBeautyPage.js","./productSlider":"productSlider.js"}],"../../../../../../../../../.nvm/versions/node/v12.16.1/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -470,7 +531,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62382" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63260" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -12,6 +12,7 @@ import ingredientDrawer from './ingredientDrawer';
 // About Page
 import fixedSubNav from './fixedSubNav';
 import anchorLinks from './anchorLinks';
+import anchorLinksBeautyPage from './anchorLinksBeautyPage';
 import productSwiper from './productSlider';
 
 if (window.location.pathname === '/products/vital-serum') {
@@ -31,7 +32,8 @@ if (window.location.pathname === '/pages/our-founder') {
 }
 if (window.location.pathname === '/pages/clean-beauty') {
   accordion();
-  // fixedSubNav();
+  fixedSubNav();
+  anchorLinksBeautyPage();
 }
 
 fixedHeader();
