@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>{{ page_title }} | East 29th</title>
     <meta charset="utf-8" />
@@ -7,6 +7,8 @@
     <meta name="description" content="{{ page_description | escape }}" />
     <link rel="canonical" href="{{ canonical_url }}" />
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="dns-prefetch" href="https://cdn.shopify.com">
+    <link rel="prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js" as="script" crossorigin="anonymous">
     {{
       content_for_header
     }}
@@ -24,7 +26,7 @@
       {{ content_for_layout }}
     </main>
     {% section 'footer' %}
-    <script type="text/javascript" src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"></script>
     {{ 'scripts.js' | asset_url | script_tag }}
     {{ 'cartDrawerQuantity.js' | asset_url | script_tag }}
     {{ 'lazyImg.js' | asset_url | script_tag }}

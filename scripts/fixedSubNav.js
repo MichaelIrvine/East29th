@@ -1,5 +1,5 @@
 const fixedSubNav = () => {
-  const subNavBar = document.querySelector('.about-page-nav-bar');
+  const subNavBar = document.querySelector('.sub-nav-bar');
   const subNavBarHeight = subNavBar.clientHeight;
   const topSubNav = subNavBar.offsetTop;
   const bumpedSection = document.querySelector('.flow-adjuster');

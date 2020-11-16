@@ -30,11 +30,21 @@
 }
 
 // About page Sub Nav Bar
-.fixed-sub-nav .about-page-nav-bar {
+.page-about.fixed-sub-nav .sub-nav-bar {
   position: fixed;
   z-index: 99;
 
   @media (max-width: $mobileLarge) {
+    position: relative;
+    top: 0 !important;
+  }
+}
+// Clean Beauty page Sub Nav Bar
+.page-clean-beauty.fixed-sub-nav .sub-nav-bar {
+  position: fixed;
+  z-index: 99;
+
+  @media (max-width: $tablet) {
     position: relative;
     top: 0 !important;
   }

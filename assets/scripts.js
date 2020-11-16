@@ -289,7 +289,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 
 var fixedSubNav = function fixedSubNav() {
-  var subNavBar = document.querySelector('.about-page-nav-bar');
+  var subNavBar = document.querySelector('.sub-nav-bar');
   var subNavBarHeight = subNavBar.clientHeight;
   var topSubNav = subNavBar.offsetTop;
   var bumpedSection = document.querySelector('.flow-adjuster');
@@ -329,15 +329,16 @@ exports.default = void 0;
 var anchorLinks = function anchorLinks() {
   function activeLink() {
     var whoSection = document.querySelector('.who-we-are--wrapper');
-    var missionSection = document.querySelector('.mission--wrapper');
-    var founderSection = document.querySelector('.founder--wrapper');
+    var missionSection = document.querySelector('.mission--wrapper'); // const founderSection = document.querySelector('.founder--wrapper');
+
     var whoLink = document.getElementById('who-link');
-    var missionLink = document.getElementById('mission-link');
-    var founderLink = document.getElementById('founder-link');
+    var missionLink = document.getElementById('mission-link'); // const founderLink = document.getElementById('founder-link');
+
     var windowBottom = window.scrollY + window.innerHeight;
     var whoSectionBottom = whoSection.offsetTop + whoSection.clientHeight;
-    var missionSectionBottom = missionSection.offsetTop + missionSection.clientHeight;
-    var founderSectionBottom = founderSection.offsetTop + founderSection.clientHeight; // Who We Are
+    var missionSectionBottom = missionSection.offsetTop + missionSection.clientHeight; // const founderSectionBottom =
+    //   founderSection.offsetTop + founderSection.clientHeight;
+    // Who We Are
 
     if (windowBottom >= whoSection.offsetTop && windowBottom < whoSectionBottom) {
       whoLink.classList.add('active');
@@ -350,13 +351,15 @@ var anchorLinks = function anchorLinks() {
       missionLink.classList.add('active');
     } else {
       missionLink.classList.remove('active');
-    }
+    } // if (
+    //   windowBottom >= founderSection.offsetTop &&
+    //   windowBottom < founderSectionBottom
+    // ) {
+    //   founderLink.classList.add('active');
+    // } else {
+    //   founderLink.classList.remove('active');
+    // }
 
-    if (windowBottom >= founderSection.offsetTop && windowBottom < founderSectionBottom) {
-      founderLink.classList.add('active');
-    } else {
-      founderLink.classList.remove('active');
-    }
   }
 
   window.addEventListener('scroll', activeLink);
@@ -434,7 +437,7 @@ if (window.location.pathname === '/pages/our-founder') {
 }
 
 if (window.location.pathname === '/pages/clean-beauty') {
-  (0, _accordion.default)();
+  (0, _accordion.default)(); // fixedSubNav();
 }
 
 (0, _fixedHeader.default)();
@@ -467,7 +470,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61727" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62382" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

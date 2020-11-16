@@ -31,6 +31,7 @@ if (window.location.pathname === '/pages/our-founder') {
 }
 if (window.location.pathname === '/pages/clean-beauty') {
   accordion();
+  // fixedSubNav();
 }
 
 fixedHeader();

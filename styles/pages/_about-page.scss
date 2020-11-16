@@ -81,7 +81,7 @@
 
   // About Page Navigation
 
-  .about-page-nav-bar {
+  .sub-nav-bar {
     width: 100%;
     height: 50px;
     display: flex;
@@ -438,7 +438,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: $spacer140 0;
+      padding: $spacer140 0 0;
 
       @media (max-width: $tablet) {
         height: auto;
