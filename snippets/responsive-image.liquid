@@ -1,0 +1,10 @@
+{% comment %} Reusable Snippet for lazyloaded + srcset images {% endcomment %}
+  <img 
+    class="lazy lazy-reveal lazy-image-wrapper"
+    data-srcset="
+    {% if imgSrc.width > 420 %}{{ imgSrc.src | img_url: '420x' }} 420w{% endif %}
+    {% if imgSrc.width > 720 %},{{ imgSrc.src | img_url: '720x' }} 720w{% endif %}
+    {% if imgSrc.width > 900 %},{{ imgSrc.src | img_url: '1080x' }} 900w{% endif %} 
+    " 
+    alt="{{imgSrc.alt | escape}}"
+  />

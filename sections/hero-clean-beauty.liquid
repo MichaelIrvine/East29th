@@ -14,12 +14,12 @@
     </div>
   </div>
   <div class="hero-clean-beauty__col-02 lazy-image-wrapper">
-    <img
-    data-aspect="portrait"
+    {% comment %} <img
     data-src="{{section.settings.hero-clean-beauty-image | img_url: 'master'}}"
     alt="{{ hero-clean-beauty-image.alt | escape }}"
     class="lazy lazy-reveal delay-1"
-    /> 
+    />  {% endcomment %}
+    {% render 'responsive-image' with imgSrc: section.settings.hero-clean-beauty-image %}
   </div>
 </div>
 

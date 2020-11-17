@@ -34,7 +34,7 @@
   position: fixed;
   z-index: 99;
 
-  @media (max-width: $mobileLarge) {
+  @media (max-width: $tablet) {
     position: relative;
     top: 0 !important;
   }

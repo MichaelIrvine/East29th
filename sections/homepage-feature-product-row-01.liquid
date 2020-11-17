@@ -1,9 +1,10 @@
+{% comment %} <img 
+    data-src="{{section.settings.homepage-feature-product-first-row-image | img_url: '620x'}}" 
+    class="lazy lazy-reveal lazy-image-wrapper"
+    alt="{{homepage-feature-product-first-row-image.alt | escape}}"/> {% endcomment %}
 <div class="homepage-feature-product__row-01 featured-product-row">
   <div class="homepage-feature-product__col-01">
-    <img 
-    data-src="{{section.settings.homepage-feature-product-first-row-image | img_url: '620x'}}" 
-    class="lazy lazy-reveal"
-    alt="{{homepage-feature-product-first-row-image.alt | escape}}"/>
+    {% render 'responsive-image' with imgSrc: section.settings.homepage-feature-product-first-row-image %}
   </div>
   <div class="homepage-feature-product__col-02">
   <div class="col_02__inner-wrapper">

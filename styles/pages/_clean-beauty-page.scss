@@ -130,9 +130,9 @@
 
     @media (max-width: $tablet) {
       height: auto;
-      padding: $spacer50 1.5rem;
+      padding: 0;
       width: 80%;
-      margin: 0 auto;
+      margin: $spacer80 auto 0;
     }
 
     @media (max-width: $mobileLarge) {
@@ -208,8 +208,12 @@
         width: 100%;
       }
 
+      @media (max-width: $tablet) {
+        padding: 3.5rem 3.5rem 0;
+      }
+
       @media (max-width: $mobileLarge) {
-        padding: 3.5rem 1.5rem;
+        padding: 3.5rem 1.5rem 0;
       }
 
       .col-02--inner-wrapper {
@@ -290,8 +294,12 @@
         width: 100%;
       }
 
+      @media (max-width: $tablet) {
+        padding: 3.5rem 3.5rem 0;
+      }
+
       @media (max-width: $mobileLarge) {
-        padding: 3.5rem 1.5rem;
+        padding: 3.5rem 1.5rem 0;
       }
 
       .col-01--inner-wrapper {
@@ -359,18 +367,11 @@
   .clean-vegan--wrapper {
     // Image
     .clean-vegan--row-1 {
-      margin-top: $spacer140;
-      margin-bottom: $spacer140;
-
-      @media (max-width: 820px) {
-        margin-top: $spacer80;
-        margin-bottom: $spacer80;
-      }
       .row-1--wrapper {
-        padding: 3.5rem 4rem 0 4rem;
+        padding: 0rem 4rem 0 4rem;
 
         @media (max-width: $tablet) {
-          padding: 3.5rem;
+          padding: 0 3.5rem;
         }
 
         @media (max-width: $mobileLarge) {
@@ -385,6 +386,7 @@
     // Title & Certification
     .clean-vegan--row-2 {
       padding: 0 8rem;
+      margin-top: $spacer50;
       margin-bottom: $spacer50;
 
       @media (max-width: 820px) {
@@ -491,8 +493,12 @@
         width: 100%;
       }
 
+      @media (max-width: $tablet) {
+        padding: 3.5rem 3.5rem 0;
+      }
+
       @media (max-width: $mobileLarge) {
-        padding: 3.5rem 1.5rem;
+        padding: 3.5rem 1.5rem 0;
       }
 
       .col-02--inner-wrapper {
@@ -503,38 +509,38 @@
       }
     }
   }
-}
 
-// This might need to be removed
-.anchor {
-  display: block;
-  position: relative;
-  top: -250px;
-  visibility: hidden;
-}
-
-.anchor-link:hover {
-  color: $e29yellow;
-  text-decoration: underline;
-}
-
-.anchor-link.active {
-  color: $e29yellow;
-  text-decoration: underline;
-
-  @media (max-width: $mobileLarge) {
-    color: $white;
-    text-decoration: none;
+  // This might need to be removed
+  .anchor {
+    display: block;
+    position: relative;
+    top: -250px;
+    visibility: hidden;
   }
-}
 
-// Class to account for the page flow shift for sticky sub nav
-.flow-adjuster {
-  &.bumped {
-    height: 50px;
+  .anchor-link:hover {
+    color: $e29yellow;
+    text-decoration: underline;
+  }
+
+  .anchor-link.active {
+    color: $e29yellow;
+    text-decoration: underline;
 
     @media (max-width: $mobileLarge) {
-      height: 0;
+      color: $white;
+      text-decoration: none;
+    }
+  }
+
+  // Class to account for the page flow shift for sticky sub nav
+  .flow-adjuster {
+    &.bumped {
+      height: 50px;
+
+      @media (max-width: $tablet) {
+        height: 0;
+      }
     }
   }
 }

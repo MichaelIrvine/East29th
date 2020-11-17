@@ -1,10 +1,18 @@
 
 <section class="our-founder-outro--wrapper">
   <div class="our-founder-outro-image">
-    <img 
+    {% comment %} <img 
     src="{{section.settings.our-founder-outro-image | img_url: 'master'}}" 
     
-    alt="{{our-founder-outro-image.alt | escape}}">
+    alt="{{our-founder-outro-image.alt | escape}}"> {% endcomment %}
+    <img 
+    class="lazy lazy-reveal"
+    data-srcset="
+    {% if section.settings.our-founder-outro-image.width > 420 %}{{ section.settings.our-founder-outro-image.src | img_url: '420x' }} 420w{% endif %}
+    {% if section.settings.our-founder-outro-image.width > 720 %},{{ section.settings.our-founder-outro-image.src | img_url: '720x' }} 720w{% endif %}
+    {% if section.settings.our-founder-outro-image.width > 900 %},{{ section.settings.our-founder-outro-image.src | img_url: 'master' }} 900w{% endif %} 
+    " 
+    alt="{{section.settings.our-founder-outro-image.alt | escape}}">
   </div>
 </section>
 

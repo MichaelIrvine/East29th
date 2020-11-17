@@ -1,15 +1,22 @@
 .horizontal-spacer {
+  height: 270px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: $tablet) {
+    height: 160px;
+  }
+
   &:before {
     display: block;
     content: '';
     width: 75%;
     height: 1px;
-    margin: $spacer140 auto;
     background-color: $grey;
 
     @media (max-width: $tablet) {
       width: 90%;
-      margin: $spacer50 auto;
     }
   }
 }

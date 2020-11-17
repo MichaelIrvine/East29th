@@ -2,11 +2,12 @@
 <section id="serums" class="clean-serums image-is-left-aligned">
   <div class="clean-serums_section__col-01">
     <div class="col-01--inner-wrapper">
-      <img 
+      {% comment %} <img 
       data-aspect="portrait"
       data-src="{{section.settings.clean-beauty-serums-image | img_url: 'master'}}" 
       class="lazy lazy-reveal"
-      alt="{{section.settings.clean-beauty-serums-image.alt | escape }}">
+      alt="{{section.settings.clean-beauty-serums-image.alt | escape }}"> {% endcomment %}
+      {% render 'responsive-image' with imgSrc: section.settings.clean-beauty-serums-image %}
     </div>
   </div>
   <div class="clean-serums_section__col-02">

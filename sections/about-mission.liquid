@@ -13,9 +13,13 @@
   </div>
   <div class="mission--row-02">
     <img 
-    src="{{section.settings.mission-image | img_url: 'master'}}" 
-
-    alt="{{mission-image.alt | escape}}">
+    class="lazy lazy-reveal"
+    data-srcset="
+    {% if section.settings.mission-image.width > 420 %}{{ section.settings.mission-image.src | img_url: '420x' }} 420w{% endif %}
+    {% if section.settings.mission-image.width > 720 %},{{ section.settings.mission-image.src | img_url: '720x' }} 720w{% endif %}
+    {% if section.settings.mission-image.width > 900 %},{{ section.settings.mission-image.src | img_url: '1080x' }} 900w{% endif %} 
+    " 
+    alt="{{section.settings.mission-image.alt | escape}}">
   </div>
   <div class="mission--row-03">
     <h3>{{section.settings.values-text}}</h3>

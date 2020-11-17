@@ -20,10 +20,11 @@
   {% comment %} Colum 2 with Image {% endcomment %}
   <div class="our-founder_section__col-02">
     <div class="col-02--inner-wrapper lazy-image-wrapper">
-      <img 
+      {% comment %} <img 
       data-src="{{section.settings.our-founder-qa-section-2-image | img_url: 'master'}}" 
       class="lazy lazy-reveal"
-      alt="{{section.settings.our-founder-qa-section-2-image.alt | escape }}">
+      alt="{{section.settings.our-founder-qa-section-2-image.alt | escape }}"> {% endcomment %}
+      {% render 'responsive-image' with imgSrc: section.settings.our-founder-qa-section-2-image %}
     </div>
   </div>
 </section>

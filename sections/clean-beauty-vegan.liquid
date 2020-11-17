@@ -3,12 +3,20 @@
   <div class="clean-vegan--row-1">
     {% comment %} Image here {% endcomment %}
     <div class="row-1--wrapper">
-      <img 
+      {% comment %} <img 
       data-aspect="horizontal"
       data-src="{{section.settings.clean-beauty-vegan-image | img_url: 'master'}}" 
       class="lazy lazy-reveal"
       alt="{{section.settings.clean-beauty-vegan-image.alt | escape }}"
-      >
+      > {% endcomment %}
+      <img 
+      class="lazy lazy-reveal"
+      data-srcset="
+      {% if section.settings.clean-beauty-vegan-image.width > 420 %}{{ section.settings.clean-beauty-vegan-image.src | img_url: '420x' }} 420w{% endif %}
+      {% if section.settings.clean-beauty-vegan-image.width > 720 %},{{ section.settings.clean-beauty-vegan-image.src | img_url: '720x' }} 720w{% endif %}
+      {% if section.settings.clean-beauty-vegan-image.width > 900 %},{{ section.settings.clean-beauty-vegan-image.src | img_url: 'master' }} 900w{% endif %} 
+      " 
+      alt="{{section.settings.clean-beauty-vegan-image.alt | escape}}">
     </div>
   </div>
   {% comment %} Row 2 {% endcomment %}

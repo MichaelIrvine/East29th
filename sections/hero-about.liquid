@@ -14,11 +14,13 @@
     </div>
   </div>
   <div class="hero-about__col-02">
-    <img
+    {% comment %} <img
           data-src="{{section.settings.hero-about-image | img_url: 'master'}}"
           alt="{{ hero-about-image.alt | escape }}"
           class="lazy lazy-reveal delay-1"
-        /> 
+        />  {% endcomment %}
+
+        {% render 'responsive-image' with imgSrc: section.settings.hero-about-image %}
   </div>
 </div>
 
