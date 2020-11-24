@@ -1,0 +1,97 @@
+<div class="modal--wrapper" role="dialog" aria-hidden="true" aria-labelledby="modalTitle" aria-describedby="modalDesc">
+  <div class="modal">
+    <div class="modal-col-1">
+      <div class="modal-image--wrapper">
+        <img src="{{section.settings.pop-up-image.src | img_url: '600x' }}" 
+             alt="{{section.settings.pop-up-image.alt | escape }}">
+      </div>
+    </div>
+    <div class="modal-col-2">
+      <button id="close-modal" class="close-modal" aria-label="Close Pop-up">
+        <span></span>
+        <span></span>
+      </button>
+      <div class="modal-text--wrapper">
+        <h3 id="modalTitle">{{section.settings.pop-up-title}}</h3>
+        <p>{{section.settings.pop-up-text}}</p>
+        <p class="screenreader-text" id="modalDesc">
+        A dialog window has opened. The dialog says: {{section.settings.pop-up-text}}
+        Close the dialog window by pressing the close button or the escape key.
+        </p>
+      </div>
+      <span class="divider"></span>
+      <div class="modal-form--wrapper">
+        <form method="post" action="/contact#contact_form" id="modal_contact_form" class="contact-form" accept-charset="UTF-8">
+        <input type="hidden" value="customer" name="form_type">
+        <input type="hidden" name="utf8" value="✓">
+        {{ form.errors | default_errors }}
+        {% if form.posted_successfully? %}
+        <div class="newsletter--form">
+          <div class="note form-success">
+            Thanks for signing up, please check your email to confirm your
+            subscription.
+          </div>
+        </div>
+        {% else %}
+        <input type="hidden" name="contact[tags]" value="modal-newsletter" />
+        <div class="newsletter--form">
+          <div class="input-group">
+            <input
+              type="email"
+              required
+              value="{% if customer %}{{ customer.email }}{% endif %}"
+              placeholder="Email"
+              name="contact[email]"
+              id="modal-email"
+              class="input-group-field newsletter__input"
+              autocorrect="off"
+              autocapitalize="off"
+              aria-label="East 29th Newsletter Sign up form"
+            />
+            <span class="input-group-btn">
+              <button
+                id="modal-subscribe"
+                type="submit"
+                class="button"
+                aria-label="Newsletter sign-up"
+              >
+                {{section.settings.pop-up-button}}
+              </button>
+            </span>
+          </div>
+        </div>
+        {% endif %}
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="modal-mask"></div>
+</div>
+
+{% schema %}
+  {
+    "name": "Newsletter Pop-up",
+    "settings": [
+      {
+        "id": "pop-up-title",
+        "type": "text",
+        "label": "Pop-up Title"
+      }, 
+      {
+        "id": "pop-up-text",
+        "type": "textarea",
+        "label": "Pop-up Text"
+      },
+      {
+        "id": "pop-up-image",
+        "type": "image_picker",
+        "label": "Pop-up Image"
+      },
+      {
+        "id": "pop-up-button",
+        "type": "text",
+        "label": "Pop-up Button Text"
+      }
+    ]
+  }
+{% endschema %}

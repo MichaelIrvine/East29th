@@ -1,9 +1,7 @@
 {% comment %} Our Founder Page - Section 2 {% endcomment %}
 <section class="image-is-right-aligned">
-  {% comment %} Column 1 with Q/A {% endcomment %}
   <div class="our-founder_section__col-01">
     <div class="col-01--inner-wrapper">
-      {% comment %} Questions / Answers start here {% endcomment %}
       <div class="our-founder_q-a--wrapper">
         {% for block in section.blocks %}
           <button class="toggle-answer accordion__button">
@@ -17,13 +15,8 @@
       </div>
     </div>
   </div>
-  {% comment %} Colum 2 with Image {% endcomment %}
   <div class="our-founder_section__col-02">
     <div class="col-02--inner-wrapper lazy-image-wrapper">
-      {% comment %} <img 
-      data-src="{{section.settings.our-founder-qa-section-2-image | img_url: 'master'}}" 
-      class="lazy lazy-reveal"
-      alt="{{section.settings.our-founder-qa-section-2-image.alt | escape }}"> {% endcomment %}
       {% render 'responsive-image' with imgSrc: section.settings.our-founder-qa-section-2-image %}
     </div>
   </div>

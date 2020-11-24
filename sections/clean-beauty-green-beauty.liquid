@@ -20,11 +20,6 @@
   {% comment %} Colum 2 with Image {% endcomment %}
   <div class="green-beauty_section__col-02">
     <div class="col-02--inner-wrapper lazy-image-wrapper">
-      {% comment %} <img 
-      data-aspect="portrait"
-      data-src="{{section.settings.green-beauty-image | img_url: 'master'}}" 
-      class="lazy lazy-reveal"
-      alt="{{section.settings.green-beauty-image.alt | escape }}"> {% endcomment %}
     {% render 'responsive-image' with imgSrc: section.settings.green-beauty-image %}
     </div>
   </div>

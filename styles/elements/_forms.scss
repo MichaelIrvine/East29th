@@ -9,3 +9,23 @@ textarea {
 .shopify-challenge__container {
   margin: 10rem auto !important;
 }
+
+.shopify-challenge__button {
+  background-color: $e29green;
+  font-family: $font__main--med;
+  color: $e29yellow;
+  text-transform: uppercase;
+  text-align: center;
+  border: 1px solid $e29green;
+  font-size: 0.875rem;
+  transition: all 100ms ease-in-out;
+  width: 180px;
+  height: 40px;
+  cursor: pointer;
+
+  &:hover {
+    border: 1px solid $e29green;
+    background-color: $white;
+    color: $e29green;
+  }
+}

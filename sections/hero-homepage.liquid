@@ -3,15 +3,6 @@
 <div id="hero-homepage" class="hero-homepage">
   <div class="hero-homepage__col-01">
     {% render 'responsive-image' with imgSrc: section.settings.hero-homepage-image %}
-            {% comment %} {% assign image = section.settings.hero-homepage-image %}
-          <img 
-              class="lazy lazy-reveal lazy-image-wrapper"
-              data-srcset="
-              {% if image.width > 420 %}{{ image.src | img_url: '420x' }} 420w{% endif %}
-              {% if image.width > 720 %},{{ image.src | img_url: '720x' }} 720w{% endif %}
-              {% if image.width > 900 %},{{ image.src | img_url: '1080x' }} 900w{% endif %} 
-              " 
-          /> {% endcomment %}
     <div class="arrow-down">
       <svg xmlns="http://www.w3.org/2000/svg" width="24.413" height="98.707">
         <g
