@@ -4,13 +4,14 @@
   <form action="/cart" method="post" novalidate class="cart-form__main">
     <div class="cart-form__main--cart-contents">
       {% for item in cart.items %}
+      <div class="cart-form__main--inner-wrapper">
+      
+      
       <div class="cart-contents__col-01">
-        <a href="{{ item.url | within: collections.all }}">
           <img
-            src="{{ item | img_url: 'medium' }}"
+            src="{{ item | img_url: '250x' }}"
             alt="{{ item.title | escape }}"
           />
-        </a>
       </div>
       <div class="cart-contents__col-02">
         <div class="cart-contents__title--wrapper">
@@ -82,15 +83,17 @@
             Update Cart
           </button>
         </div>
-        <!-- 
+
         {% if item.original_line_price != item.line_price %}
         <p>{{ item.original_line_price | money }}</p>
         {% endif %}
         <p>{{ item.line_price | money }}</p>
-        {% for discount in item.discounts %}{{ discount.title }}{% endfor %} -->
+        {% for discount in item.discounts %}{{ discount.title }}{% endfor %}
+        
       </div>
-    </div>
+      </div>
     {% endfor %}
+    </div>
     <div class="cart-contents__subtotal--wrapper">
       <div class="subtotal__col-01">
         <p>Subtotal</p>

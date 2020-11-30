@@ -11,17 +11,19 @@ body.modal-open {
   bottom: 0;
   width: 100%;
   max-height: 1px;
+  display: none;
   opacity: 0;
   transition: max-height 50ms ease;
   z-index: 99999;
-  // display: none;
 
   &.modal-active {
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 1;
     max-height: 100vh;
+  }
+  &.modal-visible {
+    opacity: 1;
   }
 
   .modal-mask {
@@ -142,7 +144,7 @@ body.modal-open {
 }
 
 // modal Transitions
-.modal--wrapper.modal-active > .modal {
+.modal--wrapper.modal-visible > .modal {
   opacity: 1;
 }
 
