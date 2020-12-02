@@ -1,4 +1,3 @@
-{% if section.blocks != blank %}
 <div class="modal--wrapper" role="dialog" aria-hidden="true" aria-labelledby="modalTitle" aria-describedby="modalDesc">
   <div class="modal">
     <div class="modal-col-1">
@@ -8,10 +7,7 @@
       </div>
     </div>
     <div class="modal-col-2">
-      <button id="close-modal" class="close-modal" aria-label="Close Pop-up">
-        <span></span>
-        <span></span>
-      </button>
+      <div class="modal-col-2--inner-wrapper">
       <div class="modal-text--wrapper">
         <h3 id="modalTitle">{{section.settings.pop-up-title}}</h3>
         <p>{{section.settings.pop-up-text}}</p>
@@ -20,7 +16,7 @@
         Close the dialog window by pressing the close button or the escape key.
         </p>
       </div>
-      <span class="divider"></span>
+      {% comment %} <span class="divider"></span> {% endcomment %}
       <div class="modal-form--wrapper">
         <form method="post" action="/contact#contact_form" id="modal_contact_form" class="contact-form" accept-charset="UTF-8">
         <input type="hidden" value="customer" name="form_type">
@@ -64,11 +60,15 @@
         {% endif %}
         </form>
       </div>
+      </div>
+      <button id="close-modal" class="close-modal" aria-label="Close Pop-up">
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </div>
   <div class="modal-mask"></div>
 </div>
-{% endif %}
 
 {% schema %}
   {

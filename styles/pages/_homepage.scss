@@ -250,6 +250,10 @@
     }
 
     img {
+      object-fit: contain;
+    }
+
+    img {
       @media (max-width: $tablet) {
         margin: 0 auto;
       }
@@ -265,6 +269,10 @@
     @media (max-width: $tablet) {
       width: 100%;
       height: auto;
+    }
+
+    img {
+      object-fit: contain;
     }
 
     .col_02__inner-wrapper {

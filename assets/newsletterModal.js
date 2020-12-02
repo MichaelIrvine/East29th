@@ -14,7 +14,7 @@ if ('localStorage' in window && window['localStorage'] !== null) {
   if (visits == 1) {
     setTimeout(() => {
       openModal();
-    }, 5000);
+    }, 1000);
 
     // Form Submit - set visits to +1
     form.addEventListener('submit', onFormSubmit);
