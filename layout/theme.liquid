@@ -231,7 +231,8 @@
       </div>
     </footer>
 
-    
+    {% comment %} Small hack to remove hidden LSEP Char on Windows Chrome {% endcomment %}
+    <script type="text/javascript">  document.body.innerHTML = document.body.innerHTML.replace(/\u2028/g, '');  </script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"></script>
     {{ 'scripts.js' | asset_url | script_tag }}
     {{ 'cartDrawerQuantity.js' | asset_url | script_tag }}
