@@ -454,6 +454,23 @@ var productSwiper = function productSwiper() {
 
 var _default = productSwiper;
 exports.default = _default;
+},{}],"blogTagFilter.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var blogTagFilter = function blogTagFilter() {
+  var filter = document.getElementById('BlogTagFilter');
+  filter.addEventListener('change', function () {
+    document.location.href = filter.value;
+  });
+};
+
+var _default = blogTagFilter;
+exports.default = _default;
 },{}],"scripts.js":[function(require,module,exports) {
 "use strict";
 
@@ -474,6 +491,8 @@ var _anchorLinks = _interopRequireDefault(require("./anchorLinks"));
 var _anchorLinksBeautyPage = _interopRequireDefault(require("./anchorLinksBeautyPage"));
 
 var _productSlider = _interopRequireDefault(require("./productSlider"));
+
+var _blogTagFilter = _interopRequireDefault(require("./blogTagFilter"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -503,7 +522,8 @@ if (window.location.pathname === '/pages/clean-beauty') {
 
 (0, _fixedHeader.default)();
 (0, _drawer.default)();
-},{"./fixedHeader":"fixedHeader.js","./drawer":"drawer.js","./accordion":"accordion.js","./comments":"comments.js","./ingredientDrawer":"ingredientDrawer.js","./fixedSubNav":"fixedSubNav.js","./anchorLinks":"anchorLinks.js","./anchorLinksBeautyPage":"anchorLinksBeautyPage.js","./productSlider":"productSlider.js"}],"../../../../../../../../../.nvm/versions/node/v12.16.1/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+(0, _blogTagFilter.default)();
+},{"./fixedHeader":"fixedHeader.js","./drawer":"drawer.js","./accordion":"accordion.js","./comments":"comments.js","./ingredientDrawer":"ingredientDrawer.js","./fixedSubNav":"fixedSubNav.js","./anchorLinks":"anchorLinks.js","./anchorLinksBeautyPage":"anchorLinksBeautyPage.js","./productSlider":"productSlider.js","./blogTagFilter":"blogTagFilter.js"}],"../../../../../../../../../.nvm/versions/node/v12.16.1/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -531,7 +551,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65493" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50062" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

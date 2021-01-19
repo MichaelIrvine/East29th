@@ -1,0 +1,39 @@
+{% for article in blog.articles %}
+<li class="article-item">
+  <div class="article-item--image-wrapper aspect-ratio__4x5">
+    <a href="{{ article.url }}">
+      {% assign imgSrc = article.image %}
+      <img
+        class="article__list-image lazyload"
+        srcset="
+          {% if imgSrc.width > 320 %}{{ imgSrc.src | img_url: '320x' }} 320w{% endif %}
+          {% if imgSrc.width > 420 %},{{ imgSrc.src | img_url: '420x' }} 420w{% endif %}
+          {% if imgSrc.width > 720 %},{{ imgSrc.src | img_url: '720x' }} 720w{% endif %}
+          "
+        alt="{{ article.title }}"
+      />
+    </a>
+  </div>
+
+  <div class="meta--wrapper">
+    <ul class="">
+      {% if article.tags.size > 0 %} {% for tag in article.tags %}
+      <li>
+        <span>{{ tag }}{% unless forloop.last %}, {% endunless %}</span>
+      </li>
+      {% endfor %} {% endif %}
+    </ul>
+    <p>
+      <span>{{ article.created_at | date: '%d.%m.%Y' }}</span>
+    </p>
+  </div>
+
+  <div class="article-item__title--wrapper">
+    <h3>{{ article.title }}</h3>
+  </div>
+
+  <div class="article-item__link--wrapper">
+    <a href="{{ article.url }}"> Read Now {% render 'blog-link-arrow'%} </a>
+  </div>
+</li>
+{% endfor %}

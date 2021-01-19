@@ -1,0 +1,46 @@
+{% assign blog_handle = 'journal'%} {% for article in
+blogs[blog_handle].articles limit: 1 %}
+<div class="latest-posts--wrapper">
+  <div class="latest-post--col lp-col-1">
+    <div class="latest-post--image-wrapper aspect-ratio__1x1">
+      <a href="{{ article.url }}">
+        {% assign imgSrc = article.image %}
+        <img
+          class="article__list-image lazyload"
+          srcset="
+          {% if imgSrc.width > 320 %}{{ imgSrc.src | img_url: '320x' }} 320w{% endif %}
+          {% if imgSrc.width > 420 %},{{ imgSrc.src | img_url: '420x' }} 420w{% endif %}
+          {% if imgSrc.width > 720 %},{{ imgSrc.src | img_url: '720x' }} 720w{% endif %}
+          "
+          alt="{{ article.title }}"
+        />
+      </a>
+    </div>
+  </div>
+  <div class="latest-post--col lp-col-2">
+    <div class="meta--wrapper">
+      <ul class="">
+        {% if article.tags.size > 0 %} {% for tag in article.tags %}
+        <li>{{ tag }} {% unless forloop.last %}, {% endunless %}</li>
+        {% endfor %} {% endif %}
+      </ul>
+      <p>
+        {{ article.created_at | date: '%d.%m.%Y' }}
+      </p>
+    </div>
+    <div class="latest-post__title--wrapper">
+      <h2>{{ article.title }}</h2>
+    </div>
+    <div class="latest-post__excerpt--wrapper">
+      {% if article.excerpt.size > 0 %}
+      <p>{{ article.excerpt }}</p>
+      {% else %}
+      <p>{{ article.content | strip_html | truncate: 150 }}</p>
+      {% endif %}
+    </div>
+    <div class="latest-post__link--wrapper">
+      <a href="{{ article.url }}"> Read Now {% render 'blog-link-arrow'%} </a>
+    </div>
+  </div>
+</div>
+{% endfor %}
