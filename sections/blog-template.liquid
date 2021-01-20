@@ -1,7 +1,6 @@
 {% paginate blog.articles by 2 %}
 
 <div class="blog-template">
-  {% comment %} Change this to not be the header {% endcomment %}
   <header class="blog-header">
     <h1>The East 29th Journal</h1>
   </header>
@@ -9,7 +8,6 @@
   <div class="blog--inner-wrapper">
     {% if current_tags %} {% render 'blog-filter'%} {% else %} {% render
     'latest-post' %} {% render 'blog-filter'%} {% endif %}
-    <!--  -->
     <div class="article-list--wrapper">
       <ul class="article-list">
         {% render 'article-list' %}
@@ -18,5 +16,7 @@
   </div>
 </div>
 
-{% if paginate.pages > 1 %} {% include 'pagination' %} {% endif %} {%
-endpaginate %}
+{% if paginate.pages > 1 %} 
+  {% include 'pagination' %} 
+{% endif %} 
+{% endpaginate %}

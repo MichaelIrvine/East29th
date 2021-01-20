@@ -16,15 +16,15 @@
   </div>
 
   <div class="meta--wrapper">
-    <ul class="">
-      {% if article.tags.size > 0 %} {% for tag in article.tags %}
-      <li>
-        <span>{{ tag }}{% unless forloop.last %}, {% endunless %}</span>
-      </li>
-      {% endfor %} {% endif %}
+    {% if article.tags.size > 0 %}
+    <ul class="tags-list">
+      {% for tag in article.tags %}
+      <li>{{ tag }}{% unless forloop.last %}, {% endunless %}</li>
+      {% endfor %}
     </ul>
+    {% endif %}
     <p>
-      <span>{{ article.created_at | date: '%d.%m.%Y' }}</span>
+      {{ article.created_at | date: '%d.%m.%Y' }}
     </p>
   </div>
 

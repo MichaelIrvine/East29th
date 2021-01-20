@@ -239,5 +239,8 @@
     {{ 'lazyImg.js' | asset_url | script_tag }}
     {{ 'fades.js' | asset_url | script_tag }}
     {{ 'newsletterModal.js' | asset_url | script_tag }}
+    {% if template.name == 'blog' %}
+      {{ 'blogTagFilter.js' | asset_url | script_tag }}
+    {% endif %}
   </body>
 </html>

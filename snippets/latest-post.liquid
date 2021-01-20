@@ -19,11 +19,13 @@ blogs[blog_handle].articles limit: 1 %}
   </div>
   <div class="latest-post--col lp-col-2">
     <div class="meta--wrapper">
-      <ul class="">
-        {% if article.tags.size > 0 %} {% for tag in article.tags %}
-        <li>{{ tag }} {% unless forloop.last %}, {% endunless %}</li>
-        {% endfor %} {% endif %}
+      {% if article.tags.size > 0 %}
+      <ul class="tags-list">
+        {% for tag in article.tags %}
+        <li>{{ tag }}{% unless forloop.last %}, {% endunless %}</li>
+        {% endfor %}
       </ul>
+      {% endif %}
       <p>
         {{ article.created_at | date: '%d.%m.%Y' }}
       </p>

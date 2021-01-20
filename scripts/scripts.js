@@ -15,7 +15,6 @@ import anchorLinks from './anchorLinks';
 import anchorLinksBeautyPage from './anchorLinksBeautyPage';
 import productSwiper from './productSlider';
 // Blog Filter
-import blogTagFilter from './blogTagFilter';
 
 if (window.location.pathname === '/products/vital-serum') {
   accordion();
@@ -40,4 +39,3 @@ if (window.location.pathname === '/pages/clean-beauty') {
 
 fixedHeader();
 drawer();
-blogTagFilter();

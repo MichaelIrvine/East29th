@@ -1,0 +1,47 @@
+// images with aspect ratio boxes
+.aspect-ratio__1x1 {
+  height: 0;
+  overflow: hidden;
+  padding-top: 100%;
+  background: white;
+  position: relative;
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+.aspect-ratio__4x5 {
+  height: 0;
+  overflow: hidden;
+  padding-top: 125%;
+  background: white;
+  position: relative;
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.aspect-ratio__16x9 {
+  height: 0;
+  overflow: hidden;
+  padding-top: 56.25%;
+  background: white;
+  position: relative;
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}

@@ -2,43 +2,39 @@
 comment.created_at %} {% assign number_of_comments = article.comments_count %}
 {% endif %}
 
-<div class="article-header--wrapper">
-  <div class="meta--wrapper">
-    <ul class="">
-      {% if article.tags.size > 0 %} {% for tag in article.tags %}
-      <li>
-        <span>{{ tag }}{% unless forloop.last %}, {% endunless %}</span>
-      </li>
-      {% endfor %} {% endif %}
-    </ul>
-    <p>
-      <span>{{ article.created_at | date: '%d.%m.%Y' }}</span>
-    </p>
+<div class="article-template">
+  <header class="article-header--wrapper">
+    <div class="meta--wrapper">
+      <ul class="">
+        {% if article.tags.size > 0 %} {% for tag in article.tags %}
+        <li>
+          <span>{{ tag }}{% unless forloop.last %}, {% endunless %}</span>
+        </li>
+        {% endfor %} {% endif %}
+      </ul>
+      <p>
+        {{ article.created_at | date: '%d.%m.%Y' }}
+      </p>
+    </div>
+
+    <h1>{{ article.title }}</h1>
+
+    <p>by <span class="article-author">{{ article.author }}</span></p>
+  </header>
+
+  <div class="article-item--image-wrapper aspect-ratio__16x9">
+    <img
+      class="article-item__featured-image lazyload"
+      src="{{ article.image.src | img_url: 'master' }}"
+      srcset="{{ article.image.src | img_url: '800x' }} 800w,{{ article.image.src | img_url: 'master' }} 1600w,"
+      alt="Featured image for {{ article.title }}"
+    />
   </div>
 
-  <h1>{{ article.title }}</h1>
-
-  <p>by {{ article.author }}</p>
+  <section class="article-content">
+    <div>{{ article.content }}</div>
+  </section>
 </div>
-
-<div class="article-item--image-wrapper aspect-ratio__4x5">
-  <a href="{{ article.url }}">
-    {% assign imgSrc = article.image %}
-    <img
-      class="article__list-image lazyload"
-      srcset="
-        {% if imgSrc.width > 320 %}{{ imgSrc.src | img_url: '320x' }} 320w{% endif %}
-        {% if imgSrc.width > 420 %},{{ imgSrc.src | img_url: '420x' }} 420w{% endif %}
-        {% if imgSrc.width > 720 %},{{ imgSrc.src | img_url: '720x' }} 720w{% endif %}
-        "
-      alt="{{ article.title }}"
-    />
-  </a>
-</div>
-
-<!-- keep -->
-<div>{{ article.content }}</div>
-
 {% if blog.comments_enabled? %}
 <h2>{{ number_of_comments }} comments</h2>
 {% paginate article.comments by 5 %} {% for comment in article.comments %}
