@@ -1,12 +1,12 @@
 {% for article in blog.articles %}
-<li class="article-item">
+<div class="article-item">
   <div class="article-item--image-wrapper aspect-ratio__4x5">
     <a href="{{ article.url }}">
       {% assign imgSrc = article.image %}
       <img
         class="article__list-image lazyload"
         srcset="
-          {% if imgSrc.width > 320 %}{{ imgSrc.src | img_url: '320x' }} 320w{% endif %}
+          {% if imgSrc.width > 320 %}{{ imgSrc.src | img_url: '240x' }} 240w{% endif %}
           {% if imgSrc.width > 420 %},{{ imgSrc.src | img_url: '420x' }} 420w{% endif %}
           {% if imgSrc.width > 720 %},{{ imgSrc.src | img_url: '720x' }} 720w{% endif %}
           "
@@ -35,5 +35,5 @@
   <div class="article-item__link--wrapper">
     <a href="{{ article.url }}"> Read Now {% render 'blog-link-arrow'%} </a>
   </div>
-</li>
+</div>
 {% endfor %}

@@ -1,0 +1,15 @@
+<div class="article-navigation">
+
+{% if blog.previous_article %}
+  <a href="{{ blog.previous_article }}" class="article-nav-link">Previous Post</a>
+  {% else %}
+  <a href="{{ blog.url }}" class="article-nav-link">Back to all</a>
+{% endif %}
+{% if blog.next_article %}
+  <a href="{{ blog.next_article }}">Next Post</a>
+  {% else %}
+  <a href="{{blog.url}}">Back To All</a>
+{% endif %}
+</div>
+
+{% comment %} if reader is on first or not last post {% endcomment %}

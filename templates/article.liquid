@@ -34,6 +34,9 @@ comment.created_at %} {% assign number_of_comments = article.comments_count %}
   <section class="article-content">
     <div>{{ article.content }}</div>
   </section>
+  <div class="article-navigation">
+    <a href="{{ blog.url }}" class="article-nav-link">More Stories</a>
+  </div>
 </div>
 {% if blog.comments_enabled? %}
 <h2>{{ number_of_comments }} comments</h2>

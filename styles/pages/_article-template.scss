@@ -12,6 +12,9 @@
     margin: 0.5rem 0 2rem;
     text-transform: uppercase;
   }
+  p {
+    letter-spacing: 0.5px;
+  }
   a {
     color: $e29green;
 
@@ -115,6 +118,30 @@
     img {
       margin: 6.5rem auto;
       width: auto;
+
+      @media (max-width: 426px) {
+        margin: 3.5rem auto;
+      }
     }
+  }
+}
+
+.article-navigation {
+  display: flex;
+  justify-content: center;
+  margin: 5rem 9.25rem 0;
+
+  @media (max-width: 1100px) {
+    margin: 5rem 6.25rem 0;
+  }
+  @media (max-width: 900px) {
+    margin: 5rem 4.25rem 0;
+  }
+
+  a {
+    text-transform: uppercase;
+    font-family: $font__main--reg;
+    font-size: 12px;
+    border-bottom: 1px solid white;
   }
 }
