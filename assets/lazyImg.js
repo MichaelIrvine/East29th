@@ -14,7 +14,11 @@ document.addEventListener('DOMContentLoaded', function () {
       entries.forEach(function (entry) {
         if (entry.intersectionRatio > 0) {
           let image = entry.target;
-          image.srcset = image.dataset.srcset;
+          // image.srcset = image.dataset.srcset;
+          image.srcset = image.dataset.srcset
+            ? image.dataset.srcset
+            : image.srcset;
+          console.log(image.srcset);
           image.classList.remove('lazy');
 
           imageObserver.unobserve(image);

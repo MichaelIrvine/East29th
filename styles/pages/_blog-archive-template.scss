@@ -1,5 +1,5 @@
 .blog-template {
-  // Global Styles for Blog Template
+  // Global Styles for Blog Archive Template
   // ---
   h2 {
     margin: 0.5rem 0 2.75rem;
@@ -30,6 +30,7 @@
 
     ul {
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
       margin-right: 1rem;
 
@@ -47,6 +48,9 @@
     }
   }
 
+  .article__list-image {
+    object-fit: cover;
+  }
   // ---
   // End Global Styles for Blog Template
 
@@ -64,12 +68,11 @@
 
 .latest-posts--wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1.5fr;
   gap: 2.5rem;
   margin-top: 5rem;
 
   @media (max-width: 820px) {
-    // grid-template-columns: 1fr;
     display: block;
   }
 
@@ -104,21 +107,14 @@
 }
 
 .blog--inner-wrapper {
-  @media (min-width: 1441px) {
-    max-width: 1600px;
-    margin: 0 auto;
-  }
+  max-width: 1110px;
+  margin: 0 auto;
 
-  margin: 0rem 9.25rem;
-
-  @media (max-width: 1100px) {
+  @media (max-width: 1410px) {
     margin: 0rem 6.25rem;
   }
-  @media (max-width: 900px) {
-    margin: 0rem 4.25rem;
-  }
 
-  @media (max-width: 426px) {
+  @media (max-width: $tablet) {
     margin: 0rem 2.25rem;
   }
 
@@ -127,12 +123,15 @@
 
     .article-list {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(3, 1fr);
       gap: 2.5rem;
 
-      @media (max-width: 820px) {
-        // grid-template-columns: 1fr;
-        display: block;
+      @media (max-width: 1440px) {
+        gap: 1.5rem;
+      }
+
+      @media (max-width: 900px) {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       }
 
       .meta--wrapper {
@@ -144,6 +143,26 @@
 
         @media (max-width: 820px) {
           margin-bottom: 3.25em;
+        }
+
+        .article-item__title--wrapper > * {
+          margin: 0.5rem 0;
+        }
+
+        ul {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          margin-right: 1rem;
+          margin-bottom: 2rem;
+
+          li {
+            font-size: 12px;
+            font-family: $font__main--reg;
+            color: $darkgrey;
+            text-transform: uppercase;
+            margin-right: 0.25rem;
+          }
         }
       }
 

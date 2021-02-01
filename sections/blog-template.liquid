@@ -1,8 +1,8 @@
-{% paginate blog.articles by 2 %}
+{% paginate blog.articles by 12 %}
 
 <div class="blog-template">
   <header class="blog-header">
-    <h1>The East 29th Journal</h1>
+    <h1>{{blog.title}}</h1>
   </header>
 
   <div class="blog--inner-wrapper">

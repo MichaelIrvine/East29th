@@ -1,4 +1,4 @@
-{% assign blog_handle = 'journal'%} {% for article in
+{% assign blog_handle = blog.handle %} {% for article in
 blogs[blog_handle].articles limit: 1 %}
 <div class="latest-posts--wrapper">
   <div class="latest-post--col lp-col-1">

@@ -1,4 +1,10 @@
 .article-template {
+  max-width: 730px;
+  margin: 0 auto;
+
+  @media (max-width: $tablet) {
+    margin: 0 2rem;
+  }
   // Global Styles for Blog Template
   // ---
   h1 {
@@ -24,7 +30,7 @@
   }
   .article-header--wrapper {
     width: 70%;
-    margin: 60px auto 5rem;
+    margin: 60px auto 0;
     padding-top: 5rem;
     display: flex;
     justify-content: center;
@@ -33,11 +39,6 @@
 
     h1 {
       text-align: center;
-      padding: 0 8rem;
-
-      @media (max-width: 900px) {
-        padding: 0;
-      }
     }
 
     p {
@@ -71,52 +72,21 @@
     }
   }
 
-  .article-content {
-    @media (min-width: 1440px) {
-      max-width: 1200px;
-      margin: 9rem auto;
-    }
-    margin: 9rem 9.25rem;
+  .article-item--image-wrapper {
+    margin: 6rem 0rem;
 
-    @media (max-width: 800px) {
-      margin: 9rem 6.5rem;
-    }
-    @media (max-width: 660px) {
-      margin: 6rem 4.5rem;
-    }
     @media (max-width: 420px) {
-      margin: 3rem 2.5rem;
+      margin: 3rem 0rem;
     }
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      padding-left: 5rem;
-
-      @media (min-width: 1440px) {
-        padding-left: 10rem;
-      }
-
-      @media (max-width: 900px) {
-        padding: 0;
-      }
+    .article-item__featured-image {
+      object-fit: cover;
     }
-    p {
-      padding: 0rem 5rem;
+  }
 
-      @media (min-width: 1440px) {
-        padding: 0 10rem;
-      }
-
-      @media (max-width: 900px) {
-        padding: 0;
-      }
-    }
+  .article-content {
     img {
-      margin: 6.5rem auto;
+      margin: 4.5rem auto;
       width: auto;
 
       @media (max-width: 426px) {
@@ -129,13 +99,10 @@
 .article-navigation {
   display: flex;
   justify-content: center;
-  margin: 5rem 9.25rem 0;
+  margin: 6rem 0rem;
 
-  @media (max-width: 1100px) {
-    margin: 5rem 6.25rem 0;
-  }
-  @media (max-width: 900px) {
-    margin: 5rem 4.25rem 0;
+  @media (max-width: 420px) {
+    margin: 3rem 0rem;
   }
 
   a {

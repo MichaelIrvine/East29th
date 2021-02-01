@@ -22,7 +22,7 @@ comment.created_at %} {% assign number_of_comments = article.comments_count %}
     <p>by <span class="article-author">{{ article.author }}</span></p>
   </header>
 
-  <div class="article-item--image-wrapper aspect-ratio__16x9">
+  <div class="article-item--image-wrapper aspect-ratio__9x21">
     <img
       class="article-item__featured-image lazyload"
       src="{{ article.image.src | img_url: 'master' }}"
