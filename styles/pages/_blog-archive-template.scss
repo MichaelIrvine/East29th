@@ -107,10 +107,14 @@
 }
 
 .blog--inner-wrapper {
-  max-width: 1110px;
+  max-width: 70%;
   margin: 0 auto;
 
-  @media (max-width: 1410px) {
+  @media (max-width: $desktopXL) {
+    max-width: 75%;
+  }
+
+  @media (max-width: $desktopLarge) {
     margin: 0rem 6.25rem;
   }
 

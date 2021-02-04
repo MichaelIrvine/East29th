@@ -117,6 +117,11 @@ svg#cart-icon {
   padding: 5rem;
   transition: transform 350ms ease-in-out;
 
+  @media (max-width: $mobileMed) {
+    padding: 3rem;
+    padding-left: 2rem;
+  }
+
   .close-nav {
     width: 16px;
     height: 16px;
@@ -158,6 +163,11 @@ svg#cart-icon {
 
       &:hover {
         text-decoration: underline;
+      }
+
+      @media (max-width: $mobileMed) {
+        font-size: 1rem;
+        margin: 1.25rem;
       }
     }
   }
